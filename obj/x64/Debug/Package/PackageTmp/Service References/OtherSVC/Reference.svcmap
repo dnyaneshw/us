@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="855824db-72c8-45cd-81e0-456b47966cbc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:48265/Other.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Other.xsd" MetadataType="Schema" ID="c286eda0-37ac-41d8-8a0f-28725285cc92" SourceId="1" SourceUrl="http://localhost:48265/Other.svc?xsd=xsd1" />
+    <MetadataFile FileName="Other.disco" MetadataType="Disco" ID="e65495b1-5267-4b9f-8acc-e2730c131280" SourceId="1" SourceUrl="http://localhost:48265/Other.svc?disco" />
+    <MetadataFile FileName="Other1.xsd" MetadataType="Schema" ID="cb036420-8623-476c-ade5-4b76aade3818" SourceId="1" SourceUrl="http://localhost:48265/Other.svc?xsd=xsd0" />
+    <MetadataFile FileName="Other.wsdl" MetadataType="Wsdl" ID="b0d0cab0-6e4d-422c-a8b5-cf22a13d257a" SourceId="1" SourceUrl="http://localhost:48265/Other.svc?wsdl" />
+    <MetadataFile FileName="Other1.wsdl" MetadataType="Wsdl" ID="ceee93e0-d473-4c19-8e72-0028a77e2c88" SourceId="1" SourceUrl="http://localhost:48265/Other.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

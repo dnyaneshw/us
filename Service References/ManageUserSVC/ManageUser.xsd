@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/InsuranceDAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InsuranceDAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+  <xs:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfusp_GetEvedenceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_GetEvedenceResult" nillable="true" type="tns:usp_GetEvedenceResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_GetEvedenceResult" nillable="true" type="tns:ArrayOfusp_GetEvedenceResult" />
+  <xs:complexType name="usp_GetEvedenceResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="Data" nillable="true" type="q1:Binary" />
+      <xs:element minOccurs="0" name="EvideDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvidenceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdatedDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_GetEvedenceResult" nillable="true" type="tns:usp_GetEvedenceResult" />
+  <xs:complexType name="ArrayOfusp_GetCertificateByIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_GetCertificateByIDResult" nillable="true" type="tns:usp_GetCertificateByIDResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_GetCertificateByIDResult" nillable="true" type="tns:ArrayOfusp_GetCertificateByIDResult" />
+  <xs:complexType name="usp_GetCertificateByIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalLang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertiDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CretiNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cust_ID" type="ser:guid" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="Data" nillable="true" type="q2:Binary" />
+      <xs:element minOccurs="0" name="EventFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoldrAdd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Waiver" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_GetCertificateByIDResult" nillable="true" type="tns:usp_GetCertificateByIDResult" />
+  <xs:complexType name="ArrayOfusp_GetCertificatesByCustomerIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_GetCertificatesByCustomerIDResult" nillable="true" type="tns:usp_GetCertificatesByCustomerIDResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_GetCertificatesByCustomerIDResult" nillable="true" type="tns:ArrayOfusp_GetCertificatesByCustomerIDResult" />
+  <xs:complexType name="usp_GetCertificatesByCustomerIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalLang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertiDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CretiID" type="ser:guid" />
+      <xs:element minOccurs="0" name="CretiNo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="Data" nillable="true" type="q3:Binary" />
+      <xs:element minOccurs="0" name="EventFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoldrAdd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoldrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Waiver" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_GetCertificatesByCustomerIDResult" nillable="true" type="tns:usp_GetCertificatesByCustomerIDResult" />
+  <xs:complexType name="ArrayOfusp_GetEvedenceDataByEVEIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_GetEvedenceDataByEVEIDResult" nillable="true" type="tns:usp_GetEvedenceDataByEVEIDResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_GetEvedenceDataByEVEIDResult" nillable="true" type="tns:ArrayOfusp_GetEvedenceDataByEVEIDResult" />
+  <xs:complexType name="usp_GetEvedenceDataByEVEIDResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cust_ID" type="ser:guid" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="Data" nillable="true" type="q4:Binary" />
+      <xs:element minOccurs="0" name="EvideDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdatedDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_GetEvedenceDataByEVEIDResult" nillable="true" type="tns:usp_GetEvedenceDataByEVEIDResult" />
+</xs:schema>

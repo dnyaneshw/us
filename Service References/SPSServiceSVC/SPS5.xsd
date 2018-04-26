@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://propay.com/SPS/types" elementFormDefault="qualified" targetNamespace="http://propay.com/SPS/types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd11" namespace="http://propay.com/types" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillerAccountId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ID" nillable="true" type="tns:ID" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="TransactionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+      <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:TransactionInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionResult" nillable="true" type="tns:TransactionResult" />
+  <xs:complexType name="TransactionInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AVSCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuthorizationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyConversionRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyConvertedAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrencyConvertedCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultCode" nillable="true" type="tns:Result" />
+      <xs:element minOccurs="0" name="TransactionHistoryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CVVResponseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionInformation" nillable="true" type="tns:TransactionInformation" />
+  <xs:complexType name="CreateHostedTransactionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostedTransactionIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateHostedTransactionResult" nillable="true" type="tns:CreateHostedTransactionResult" />
+  <xs:complexType name="GetHostedTransactionResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="HostedTransaction" nillable="true" type="q1:HostedTransactionDetail" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHostedTransactionResult" nillable="true" type="tns:GetHostedTransactionResult" />
+  <xs:complexType name="GetHostedResult">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="HostedTransaction" nillable="true" type="q2:HostedTransactionResult" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHostedResult" nillable="true" type="tns:GetHostedResult" />
+  <xs:complexType name="CreateAccountInformationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExternalAccountID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAccountInformationResult" nillable="true" type="tns:CreateAccountInformationResult" />
+  <xs:complexType name="PayerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalId1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalId2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayerData" nillable="true" type="tns:PayerData" />
+  <xs:complexType name="CreateAuthTokenResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAuthTokenResult" nillable="true" type="tns:CreateAuthTokenResult" />
+  <xs:complexType name="PaymentMethodAdd">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common" base="q3:BaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillingInformation" nillable="true" type="tns:Billing" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DuplicateAction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayerAccountId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentMethodType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Priority" type="xs:int" />
+          <xs:element minOccurs="0" name="Protected" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentMethodAdd" nillable="true" type="tns:PaymentMethodAdd" />
+  <xs:complexType name="Billing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelephoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Billing" nillable="true" type="tns:Billing" />
+  <xs:complexType name="CreatePaymentMethodResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentMethodId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreatePaymentMethodResult" nillable="true" type="tns:CreatePaymentMethodResult" />
+  <xs:complexType name="PaymentMethodUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAccountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingInformation" nillable="true" type="tns:Billing" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayerAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethodID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Protected" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodUpdate" nillable="true" type="tns:PaymentMethodUpdate" />
+  <xs:complexType name="PayerInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayerInformation" nillable="true" type="tns:PayerInformation" />
+  <xs:complexType name="TempTokensForPayerEditResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CredentialId" type="xs:int" />
+      <xs:element minOccurs="0" name="PayerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+      <xs:element minOccurs="0" name="TempToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempTokensForPayerEditResult" nillable="true" type="tns:TempTokensForPayerEditResult" />
+  <xs:complexType name="TempTokenResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TempTokensForPayerEditResult">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TempTokenResult" nillable="true" type="tns:TempTokenResult" />
+  <xs:complexType name="TempTokenRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identification" nillable="true" type="tns:ID" />
+      <xs:element minOccurs="0" name="PayerInfo" nillable="true" type="tns:PayerInformation" />
+      <xs:element minOccurs="0" name="TokenProperties" nillable="true" type="tns:TempTokenProperties" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempTokenRequest" nillable="true" type="tns:TempTokenRequest" />
+  <xs:complexType name="TempTokenProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DurationSeconds" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempTokenProperties" nillable="true" type="tns:TempTokenProperties" />
+  <xs:complexType name="PaymentMethodsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentMethods" nillable="true" type="tns:ArrayOfPaymentMethodInformation" />
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodsResult" nillable="true" type="tns:PaymentMethodsResult" />
+  <xs:complexType name="ArrayOfPaymentMethodInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethodInformation" nillable="true" type="tns:PaymentMethodInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethodInformation" nillable="true" type="tns:ArrayOfPaymentMethodInformation" />
+  <xs:complexType name="PaymentMethodInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingInformation" nillable="true" type="tns:Billing" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObfuscatedAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethodID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethodType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="Protected" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodInformation" nillable="true" type="tns:PaymentMethodInformation" />
+  <xs:complexType name="FindPaymentMethodsRequest">
+    <xs:sequence>
+      <xs:element name="BillerId" nillable="true" type="tns:ID" />
+      <xs:element minOccurs="0" name="CardHolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreationStartDate" type="xs:dateTime" />
+      <xs:element name="CreatorUsername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasTrackData" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindPaymentMethodsRequest" nillable="true" type="tns:FindPaymentMethodsRequest" />
+  <xs:complexType name="FindPaymentMethodsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://propay.com/types" base="q4:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PaymentMethods" nillable="true" type="tns:ArrayOfPaymentMethodDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FindPaymentMethodsResult" nillable="true" type="tns:FindPaymentMethodsResult" />
+  <xs:complexType name="ArrayOfPaymentMethodDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethodDetails" nillable="true" type="tns:PaymentMethodDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethodDetails" nillable="true" type="tns:ArrayOfPaymentMethodDetails" />
+  <xs:complexType name="PaymentMethodDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardholderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastFour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayerId" type="xs:long" />
+      <xs:element minOccurs="0" name="PaymentMethodId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethodType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Protected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidForCardPresent" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodDetails" nillable="true" type="tns:PaymentMethodDetails" />
+  <xs:complexType name="GetPayersResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Payers" nillable="true" type="tns:ArrayOfPayerInfo" />
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPayersResult" nillable="true" type="tns:GetPayersResult" />
+  <xs:complexType name="ArrayOfPayerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayerInfo" nillable="true" type="tns:PayerInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayerInfo" nillable="true" type="tns:ArrayOfPayerInfo" />
+  <xs:complexType name="PayerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExternalId1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalId2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayerInfo" nillable="true" type="tns:PayerInfo" />
+  <xs:complexType name="CardTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MerchantProfileId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardTransaction" nillable="true" type="tns:CardTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InputIpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MerchantProfileId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayerAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+  <xs:complexType name="ProcessPaymentResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestResult" nillable="true" type="tns:Result" />
+      <xs:element minOccurs="0" name="Transactions" nillable="true" type="tns:ArrayOfTransactionInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessPaymentResult" nillable="true" type="tns:ProcessPaymentResult" />
+  <xs:complexType name="ArrayOfTransactionInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionInformation" nillable="true" type="tns:TransactionInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransactionInformation" nillable="true" type="tns:ArrayOfTransactionInformation" />
+  <xs:complexType name="SplitPayTransactionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InitialTransaction" nillable="true" type="tns:PaymentMethodTransaction" />
+      <xs:element minOccurs="0" name="InputIpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MerchantProfileId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="SecondaryTransaction" nillable="true" type="q5:PropayAccountTransaction" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SplitPayTransactionRequest" nillable="true" type="tns:SplitPayTransactionRequest" />
+  <xs:complexType name="PaymentMethodTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Invoice" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="OptionalOverrides" nillable="true" type="q6:PaymentInfoOverrides" />
+      <xs:element minOccurs="0" name="PayerAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethodId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethodTransaction" nillable="true" type="tns:PaymentMethodTransaction" />
+</xs:schema>

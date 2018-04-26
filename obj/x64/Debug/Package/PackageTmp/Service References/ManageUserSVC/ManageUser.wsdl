@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InsuranceService" />
+      <xsd:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InsuranceDAL" />
+      <xsd:import schemaLocation="http://localhost:48265/ManageUser.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ManageUser_GetCompany_List_InputMessage">
+    <wsdl:part name="parameters" element="GetCompany_List" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCompany_List_OutputMessage">
+    <wsdl:part name="parameters" element="GetCompany_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetReport_Data_InputMessage">
+    <wsdl:part name="parameters" element="GetReport_Data" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetReport_Data_OutputMessage">
+    <wsdl:part name="parameters" element="GetReport_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertCoverageData_InputMessage">
+    <wsdl:part name="parameters" element="InsertCoverageData" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertCoverageData_OutputMessage">
+    <wsdl:part name="parameters" element="InsertCoverageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertDocumentinfo_InputMessage">
+    <wsdl:part name="parameters" element="InsertDocumentinfo" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertDocumentinfo_OutputMessage">
+    <wsdl:part name="parameters" element="InsertDocumentinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_Payment_InputMessage">
+    <wsdl:part name="parameters" element="Update_Payment" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_Payment_OutputMessage">
+    <wsdl:part name="parameters" element="Update_PaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CheckEmailID_InputMessage">
+    <wsdl:part name="parameters" element="CheckEmailID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CheckEmailID_OutputMessage">
+    <wsdl:part name="parameters" element="CheckEmailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CheckCmpny_InputMessage">
+    <wsdl:part name="parameters" element="CheckCmpny" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CheckCmpny_OutputMessage">
+    <wsdl:part name="parameters" element="CheckCmpnyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_AdminLogin_InputMessage">
+    <wsdl:part name="parameters" element="AdminLogin" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_AdminLogin_OutputMessage">
+    <wsdl:part name="parameters" element="AdminLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_LoginCustomer_InputMessage">
+    <wsdl:part name="parameters" element="LoginCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_LoginCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="LoginCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCustomerInfo_InputMessage">
+    <wsdl:part name="parameters" element="GetCustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCustomerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCustomerInfoByEmailID_InputMessage">
+    <wsdl:part name="parameters" element="GetCustomerInfoByEmailID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCustomerInfoByEmailID_OutputMessage">
+    <wsdl:part name="parameters" element="GetCustomerInfoByEmailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetAllCustomers_InputMessage">
+    <wsdl:part name="parameters" element="GetAllCustomers" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetAllCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="GetAllCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCompanyAffilations_InputMessage">
+    <wsdl:part name="parameters" element="GetCompanyAffilations" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCompanyAffilations_OutputMessage">
+    <wsdl:part name="parameters" element="GetCompanyAffilationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetDocumentinfo_InputMessage">
+    <wsdl:part name="parameters" element="GetDocumentinfo" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetDocumentinfo_OutputMessage">
+    <wsdl:part name="parameters" element="GetDocumentinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCoveragebyCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="GetCoveragebyCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCoveragebyCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="GetCoveragebyCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_AddUpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="AddUpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_AddUpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="AddUpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteCompanyAffilation_InputMessage">
+    <wsdl:part name="parameters" element="DeleteCompanyAffilation" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteCompanyAffilation_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteCompanyAffilationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_SearchCustomers_InputMessage">
+    <wsdl:part name="parameters" element="SearchCustomers" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_SearchCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="SearchCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteDocument_InputMessage">
+    <wsdl:part name="parameters" element="DeleteDocument" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_DeleteDocument_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CreateEvedenceInfoByCusID_InputMessage">
+    <wsdl:part name="parameters" element="CreateEvedenceInfoByCusID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_CreateEvedenceInfoByCusID_OutputMessage">
+    <wsdl:part name="parameters" element="CreateEvedenceInfoByCusIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertEvedence_InputMessage">
+    <wsdl:part name="parameters" element="InsertEvedence" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertEvedence_OutputMessage">
+    <wsdl:part name="parameters" element="InsertEvedenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetEvedenceInfoByCusID_InputMessage">
+    <wsdl:part name="parameters" element="GetEvedenceInfoByCusID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetEvedenceInfoByCusID_OutputMessage">
+    <wsdl:part name="parameters" element="GetEvedenceInfoByCusIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_Evidence_InputMessage">
+    <wsdl:part name="parameters" element="Update_Evidence" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_Evidence_OutputMessage">
+    <wsdl:part name="parameters" element="Update_EvidenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertCertificate_InputMessage">
+    <wsdl:part name="parameters" element="InsertCertificate" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_InsertCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="InsertCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCertificateInfoByCertyID_InputMessage">
+    <wsdl:part name="parameters" element="GetCertificateInfoByCertyID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCertificateInfoByCertyID_OutputMessage">
+    <wsdl:part name="parameters" element="GetCertificateInfoByCertyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCertificateInfoByCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="GetCertificateInfoByCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetCertificateInfoByCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="GetCertificateInfoByCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetEvedenceInfoByEvedenceID_InputMessage">
+    <wsdl:part name="parameters" element="GetEvedenceInfoByEvedenceID" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_GetEvedenceInfoByEvedenceID_OutputMessage">
+    <wsdl:part name="parameters" element="GetEvedenceInfoByEvedenceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_VerificationStatus_InputMessage">
+    <wsdl:part name="parameters" element="Update_VerificationStatus" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Update_VerificationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="Update_VerificationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Delete_Evidence_InputMessage">
+    <wsdl:part name="parameters" element="Delete_Evidence" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_Delete_Evidence_OutputMessage">
+    <wsdl:part name="parameters" element="Delete_EvidenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_UpdateCertificate_InputMessage">
+    <wsdl:part name="parameters" element="UpdateCertificate" />
+  </wsdl:message>
+  <wsdl:message name="ManageUser_UpdateCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="UpdateCertificateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ManageUser">
+    <wsdl:operation name="GetCompany_List">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCompany_List" message="ManageUser_GetCompany_List_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCompany_ListResponse" message="ManageUser_GetCompany_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReport_Data">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetReport_Data" message="ManageUser_GetReport_Data_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetReport_DataResponse" message="ManageUser_GetReport_Data_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="urn:ManageUser/InsertUser" message="ManageUser_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/InsertUserResponse" message="ManageUser_InsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoverageData">
+      <wsdl:input wsaw:Action="urn:ManageUser/InsertCoverageData" message="ManageUser_InsertCoverageData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/InsertCoverageDataResponse" message="ManageUser_InsertCoverageData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentinfo">
+      <wsdl:input wsaw:Action="urn:ManageUser/InsertDocumentinfo" message="ManageUser_InsertDocumentinfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/InsertDocumentinfoResponse" message="ManageUser_InsertDocumentinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Payment">
+      <wsdl:input wsaw:Action="urn:ManageUser/Update_Payment" message="ManageUser_Update_Payment_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/Update_PaymentResponse" message="ManageUser_Update_Payment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmailID">
+      <wsdl:input wsaw:Action="urn:ManageUser/CheckEmailID" message="ManageUser_CheckEmailID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/CheckEmailIDResponse" message="ManageUser_CheckEmailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCmpny">
+      <wsdl:input wsaw:Action="urn:ManageUser/CheckCmpny" message="ManageUser_CheckCmpny_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/CheckCmpnyResponse" message="ManageUser_CheckCmpny_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminLogin">
+      <wsdl:input wsaw:Action="urn:ManageUser/AdminLogin" message="ManageUser_AdminLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/AdminLoginResponse" message="ManageUser_AdminLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCustomer">
+      <wsdl:input wsaw:Action="urn:ManageUser/LoginCustomer" message="ManageUser_LoginCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/LoginCustomerResponse" message="ManageUser_LoginCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfo">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCustomerInfo" message="ManageUser_GetCustomerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCustomerInfoResponse" message="ManageUser_GetCustomerInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoByEmailID">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCustomerInfoByEmailID" message="ManageUser_GetCustomerInfoByEmailID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCustomerInfoByEmailIDResponse" message="ManageUser_GetCustomerInfoByEmailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomers">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetAllCustomers" message="ManageUser_GetAllCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetAllCustomersResponse" message="ManageUser_GetAllCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAffilations">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCompanyAffilations" message="ManageUser_GetCompanyAffilations_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCompanyAffilationsResponse" message="ManageUser_GetCompanyAffilations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentinfo">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetDocumentinfo" message="ManageUser_GetDocumentinfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetDocumentinfoResponse" message="ManageUser_GetDocumentinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoveragebyCustomerId">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCoveragebyCustomerId" message="ManageUser_GetCoveragebyCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCoveragebyCustomerIdResponse" message="ManageUser_GetCoveragebyCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateCompany">
+      <wsdl:input wsaw:Action="urn:ManageUser/AddUpdateCompany" message="ManageUser_AddUpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/AddUpdateCompanyResponse" message="ManageUser_AddUpdateCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyAffilation">
+      <wsdl:input wsaw:Action="urn:ManageUser/DeleteCompanyAffilation" message="ManageUser_DeleteCompanyAffilation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/DeleteCompanyAffilationResponse" message="ManageUser_DeleteCompanyAffilation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomers">
+      <wsdl:input wsaw:Action="urn:ManageUser/SearchCustomers" message="ManageUser_SearchCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/SearchCustomersResponse" message="ManageUser_SearchCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="urn:ManageUser/DeleteCustomer" message="ManageUser_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/DeleteCustomerResponse" message="ManageUser_DeleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <wsdl:input wsaw:Action="urn:ManageUser/DeleteDocument" message="ManageUser_DeleteDocument_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/DeleteDocumentResponse" message="ManageUser_DeleteDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEvedenceInfoByCusID">
+      <wsdl:input wsaw:Action="urn:ManageUser/CreateEvedenceInfoByCusID" message="ManageUser_CreateEvedenceInfoByCusID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/CreateEvedenceInfoByCusIDResponse" message="ManageUser_CreateEvedenceInfoByCusID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEvedence">
+      <wsdl:input wsaw:Action="urn:ManageUser/InsertEvedence" message="ManageUser_InsertEvedence_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/InsertEvedenceResponse" message="ManageUser_InsertEvedence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvedenceInfoByCusID">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetEvedenceInfoByCusID" message="ManageUser_GetEvedenceInfoByCusID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetEvedenceInfoByCusIDResponse" message="ManageUser_GetEvedenceInfoByCusID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Evidence">
+      <wsdl:input wsaw:Action="urn:ManageUser/Update_Evidence" message="ManageUser_Update_Evidence_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/Update_EvidenceResponse" message="ManageUser_Update_Evidence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCertificate">
+      <wsdl:input wsaw:Action="urn:ManageUser/InsertCertificate" message="ManageUser_InsertCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/InsertCertificateResponse" message="ManageUser_InsertCertificate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificateInfoByCertyID">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCertificateInfoByCertyID" message="ManageUser_GetCertificateInfoByCertyID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCertificateInfoByCertyIDResponse" message="ManageUser_GetCertificateInfoByCertyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificateInfoByCustomerID">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetCertificateInfoByCustomerID" message="ManageUser_GetCertificateInfoByCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetCertificateInfoByCustomerIDResponse" message="ManageUser_GetCertificateInfoByCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvedenceInfoByEvedenceID">
+      <wsdl:input wsaw:Action="urn:ManageUser/GetEvedenceInfoByEvedenceID" message="ManageUser_GetEvedenceInfoByEvedenceID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/GetEvedenceInfoByEvedenceIDResponse" message="ManageUser_GetEvedenceInfoByEvedenceID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_VerificationStatus">
+      <wsdl:input wsaw:Action="urn:ManageUser/Update_VerificationStatus" message="ManageUser_Update_VerificationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/Update_VerificationStatusResponse" message="ManageUser_Update_VerificationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Evidence">
+      <wsdl:input wsaw:Action="urn:ManageUser/Delete_Evidence" message="ManageUser_Delete_Evidence_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/Delete_EvidenceResponse" message="ManageUser_Delete_Evidence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCertificate">
+      <wsdl:input wsaw:Action="urn:ManageUser/UpdateCertificate" message="ManageUser_UpdateCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ManageUser/UpdateCertificateResponse" message="ManageUser_UpdateCertificate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

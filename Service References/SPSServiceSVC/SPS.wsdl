@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://propay.com/SPS/contracts" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://propay.com/SPS/contracts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://propay.com/SPS/contracts/Imports">
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd0" namespace="http://propay.com/SPS/contracts" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd2" namespace="http://propay.com/SPS/types" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Propay.Common.Enums.ISO" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.ExternalPaymentMethods" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Structures" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Enums" />
+      <xsd:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd11" namespace="http://propay.com/types" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SPSService_CreateMerchantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMerchantProfile" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateMerchantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMerchantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetMerchantProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantProfiles" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetMerchantProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditMerchantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditMerchantProfile" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditMerchantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditMerchantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeleteMerchantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMerchantProfile" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeleteMerchantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMerchantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_SupportedPaymentProcessors_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupportedPaymentProcessors" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_SupportedPaymentProcessors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupportedPaymentProcessorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_SupportedProcessorFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupportedProcessorFields" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_SupportedProcessorFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupportedProcessorFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessExternalPaymentMethodTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExternalPaymentMethodTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessExternalPaymentMethodTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExternalPaymentMethodTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizeExternalPaymentMethodTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeExternalPaymentMethodTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizeExternalPaymentMethodTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeExternalPaymentMethodTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessExternalPaymentMethodSplitPayTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExternalPaymentMethodSplitPayTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessExternalPaymentMethodSplitPayTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExternalPaymentMethodSplitPayTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateHostedTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHostedTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateHostedTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHostedTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetHostedTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostedTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetHostedTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostedTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateHostedResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHostedResult" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateHostedResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHostedResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetHostedResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostedResult" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetHostedResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostedResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AutoUpdatePaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutoUpdatePaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AutoUpdatePaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutoUpdatePaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_UpdatePaymentMethodExpirationOffset_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentMethodExpirationOffset" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_UpdatePaymentMethodExpirationOffset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentMethodExpirationOffsetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayer" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePayerWithData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayerWithData" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePayerWithData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayerWithDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateAuthToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateAuthToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RevokeAuthToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RevokeAuthToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAuthTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RevokeAllAuthTokens_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAllAuthTokens" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RevokeAllAuthTokens_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAllAuthTokensResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPayer" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPayerV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPayerV2" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPayerV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPayerV2Response" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeletePayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayer" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeletePayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePaymentMethodFromEncryptedTrackData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePaymentMethodFromEncryptedTrackData" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreatePaymentMethodFromEncryptedTrackData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePaymentMethodFromEncryptedTrackDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPaymentMethodPriority_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentMethodPriority" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_EditPaymentMethodPriority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPaymentMethodPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeletePaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_DeletePaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetTempTokensForPayerEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempTokensForPayerEdit" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetTempTokensForPayerEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempTokensForPayerEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetTempToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempToken" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetTempToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetPayerPaymentMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayerPaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetPayerPaymentMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayerPaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetAllPayerPaymentMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPayerPaymentMethods" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetAllPayerPaymentMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPayerPaymentMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_FindPaymentMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentMethods" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_FindPaymentMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetPayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayers" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_GetPayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCard" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizePaymentMethodTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizePaymentMethodTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizePaymentMethodTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizePaymentMethodTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizePaymentMethodTransactionRecurring_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizePaymentMethodTransactionRecurring" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizePaymentMethodTransactionRecurring_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizePaymentMethodTransactionRecurringResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizeAndProcessEncryptedTrackData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeAndProcessEncryptedTrackData" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_AuthorizeAndProcessEncryptedTrackData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeAndProcessEncryptedTrackDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CapturePaymentV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CapturePaymentV2" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CapturePaymentV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CapturePaymentV2Response" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CapturePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CapturePayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CapturePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CapturePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPaymentMethodTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPaymentMethodTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPaymentMethodTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPaymentMethodTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPaymentMethodTransactionRecurring_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPaymentMethodTransactionRecurring" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessPaymentMethodTransactionRecurring_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPaymentMethodTransactionRecurringResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessSplitPayTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSplitPayTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessSplitPayTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSplitPayTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessSplitPayTransactionWithEncryptedTrackData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSplitPayTransactionWithEncryptedTrackData" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ProcessSplitPayTransactionWithEncryptedTrackData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSplitPayTransactionWithEncryptedTrackDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ReverseSplitPayTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseSplitPayTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_ReverseSplitPayTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseSplitPayTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_VoidPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:VoidPayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_VoidPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VoidPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreditPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditPayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_CreditPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPaymentWithTransactionHistoryID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPaymentWithTransactionHistoryID" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPaymentWithTransactionHistoryID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPaymentWithTransactionHistoryIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_PartialRefundPaymentWithTransactionHistoryID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PartialRefundPaymentWithTransactionHistoryID" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_PartialRefundPaymentWithTransactionHistoryID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PartialRefundPaymentWithTransactionHistoryIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_PartialRefundPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:PartialRefundPayment" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_PartialRefundPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PartialRefundPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_VoidPaymentV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:VoidPaymentV2" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_VoidPaymentV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VoidPaymentV2Response" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPaymentV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPaymentV2" />
+  </wsdl:message>
+  <wsdl:message name="SPSService_RefundPaymentV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefundPaymentV2Response" />
+  </wsdl:message>
+  <wsdl:portType name="SPSService">
+    <wsdl:operation name="CreateMerchantProfile">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateMerchantProfile" message="tns:SPSService_CreateMerchantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateMerchantProfileResponse" message="tns:SPSService_CreateMerchantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantProfiles">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetMerchantProfiles" message="tns:SPSService_GetMerchantProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetMerchantProfilesResponse" message="tns:SPSService_GetMerchantProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMerchantProfile">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditMerchantProfile" message="tns:SPSService_EditMerchantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditMerchantProfileResponse" message="tns:SPSService_EditMerchantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMerchantProfile">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeleteMerchantProfile" message="tns:SPSService_DeleteMerchantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeleteMerchantProfileResponse" message="tns:SPSService_DeleteMerchantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupportedPaymentProcessors">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/SupportedPaymentProcessors" message="tns:SPSService_SupportedPaymentProcessors_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/SupportedPaymentProcessorsResponse" message="tns:SPSService_SupportedPaymentProcessors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupportedProcessorFields">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/SupportedProcessorFields" message="tns:SPSService_SupportedProcessorFields_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/SupportedProcessorFieldsResponse" message="tns:SPSService_SupportedProcessorFields_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessExternalPaymentMethodTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessExternalPaymentMethodTransaction" message="tns:SPSService_ProcessExternalPaymentMethodTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessExternalPaymentMethodTransactionResponse" message="tns:SPSService_ProcessExternalPaymentMethodTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExternalPaymentMethodTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizeExternalPaymentMethodTransaction" message="tns:SPSService_AuthorizeExternalPaymentMethodTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizeExternalPaymentMethodTransactionResponse" message="tns:SPSService_AuthorizeExternalPaymentMethodTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessExternalPaymentMethodSplitPayTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessExternalPaymentMethodSplitPayTransaction" message="tns:SPSService_ProcessExternalPaymentMethodSplitPayTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessExternalPaymentMethodSplitPayTransactionResponse" message="tns:SPSService_ProcessExternalPaymentMethodSplitPayTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateHostedTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateHostedTransaction" message="tns:SPSService_CreateHostedTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateHostedTransactionResponse" message="tns:SPSService_CreateHostedTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHostedTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetHostedTransaction" message="tns:SPSService_GetHostedTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetHostedTransactionResponse" message="tns:SPSService_GetHostedTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateHostedResult">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateHostedResult" message="tns:SPSService_CreateHostedResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateHostedResultResponse" message="tns:SPSService_CreateHostedResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHostedResult">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetHostedResult" message="tns:SPSService_GetHostedResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetHostedResultResponse" message="tns:SPSService_GetHostedResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoUpdatePaymentMethod">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/AutoUpdatePaymentMethod" message="tns:SPSService_AutoUpdatePaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/AutoUpdatePaymentMethodResponse" message="tns:SPSService_AutoUpdatePaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentMethodExpirationOffset">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/UpdatePaymentMethodExpirationOffset" message="tns:SPSService_UpdatePaymentMethodExpirationOffset_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/UpdatePaymentMethodExpirationOffsetResponse" message="tns:SPSService_UpdatePaymentMethodExpirationOffset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayer">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePayer" message="tns:SPSService_CreatePayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePayerResponse" message="tns:SPSService_CreatePayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayerWithData">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePayerWithData" message="tns:SPSService_CreatePayerWithData_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePayerWithDataResponse" message="tns:SPSService_CreatePayerWithData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthToken">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateAuthToken" message="tns:SPSService_CreateAuthToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateAuthTokenResponse" message="tns:SPSService_CreateAuthToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeAuthToken">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/RevokeAuthToken" message="tns:SPSService_RevokeAuthToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/RevokeAuthTokenResponse" message="tns:SPSService_RevokeAuthToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeAllAuthTokens">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/RevokeAllAuthTokens" message="tns:SPSService_RevokeAllAuthTokens_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/RevokeAllAuthTokensResponse" message="tns:SPSService_RevokeAllAuthTokens_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateUser" message="tns:SPSService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreateUserResponse" message="tns:SPSService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPayer">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPayer" message="tns:SPSService_EditPayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPayerResponse" message="tns:SPSService_EditPayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPayerV2">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPayerV2" message="tns:SPSService_EditPayerV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPayerV2Response" message="tns:SPSService_EditPayerV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePayer">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeletePayer" message="tns:SPSService_DeletePayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeletePayerResponse" message="tns:SPSService_DeletePayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePaymentMethod">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePaymentMethod" message="tns:SPSService_CreatePaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePaymentMethodResponse" message="tns:SPSService_CreatePaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePaymentMethodFromEncryptedTrackData">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePaymentMethodFromEncryptedTrackData" message="tns:SPSService_CreatePaymentMethodFromEncryptedTrackData_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreatePaymentMethodFromEncryptedTrackDataResponse" message="tns:SPSService_CreatePaymentMethodFromEncryptedTrackData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPaymentMethod">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPaymentMethod" message="tns:SPSService_EditPaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPaymentMethodResponse" message="tns:SPSService_EditPaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPaymentMethodPriority">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPaymentMethodPriority" message="tns:SPSService_EditPaymentMethodPriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/EditPaymentMethodPriorityResponse" message="tns:SPSService_EditPaymentMethodPriority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentMethod">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeletePaymentMethod" message="tns:SPSService_DeletePaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/DeletePaymentMethodResponse" message="tns:SPSService_DeletePaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempTokensForPayerEdit">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetTempTokensForPayerEdit" message="tns:SPSService_GetTempTokensForPayerEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetTempTokensForPayerEditResponse" message="tns:SPSService_GetTempTokensForPayerEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempToken">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetTempToken" message="tns:SPSService_GetTempToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetTempTokenResponse" message="tns:SPSService_GetTempToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayerPaymentMethod">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetPayerPaymentMethod" message="tns:SPSService_GetPayerPaymentMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetPayerPaymentMethodResponse" message="tns:SPSService_GetPayerPaymentMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPayerPaymentMethods">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetAllPayerPaymentMethods" message="tns:SPSService_GetAllPayerPaymentMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetAllPayerPaymentMethodsResponse" message="tns:SPSService_GetAllPayerPaymentMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPaymentMethods">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/FindPaymentMethods" message="tns:SPSService_FindPaymentMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/FindPaymentMethodsResponse" message="tns:SPSService_FindPaymentMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayers">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetPayers" message="tns:SPSService_GetPayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/GetPayersResponse" message="tns:SPSService_GetPayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCard">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessCard" message="tns:SPSService_ProcessCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessCardResponse" message="tns:SPSService_ProcessCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPayment" message="tns:SPSService_ProcessPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPaymentResponse" message="tns:SPSService_ProcessPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizePaymentMethodTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizePaymentMethodTransaction" message="tns:SPSService_AuthorizePaymentMethodTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizePaymentMethodTransactionResponse" message="tns:SPSService_AuthorizePaymentMethodTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizePaymentMethodTransactionRecurring">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizePaymentMethodTransactionRecurring" message="tns:SPSService_AuthorizePaymentMethodTransactionRecurring_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizePaymentMethodTransactionRecurringResponse" message="tns:SPSService_AuthorizePaymentMethodTransactionRecurring_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAndProcessEncryptedTrackData">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizeAndProcessEncryptedTrackData" message="tns:SPSService_AuthorizeAndProcessEncryptedTrackData_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/AuthorizeAndProcessEncryptedTrackDataResponse" message="tns:SPSService_AuthorizeAndProcessEncryptedTrackData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturePaymentV2">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CapturePaymentV2" message="tns:SPSService_CapturePaymentV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CapturePaymentV2Response" message="tns:SPSService_CapturePaymentV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturePayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CapturePayment" message="tns:SPSService_CapturePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CapturePaymentResponse" message="tns:SPSService_CapturePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPaymentMethodTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPaymentMethodTransaction" message="tns:SPSService_ProcessPaymentMethodTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPaymentMethodTransactionResponse" message="tns:SPSService_ProcessPaymentMethodTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPaymentMethodTransactionRecurring">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPaymentMethodTransactionRecurring" message="tns:SPSService_ProcessPaymentMethodTransactionRecurring_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessPaymentMethodTransactionRecurringResponse" message="tns:SPSService_ProcessPaymentMethodTransactionRecurring_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSplitPayTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessSplitPayTransaction" message="tns:SPSService_ProcessSplitPayTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessSplitPayTransactionResponse" message="tns:SPSService_ProcessSplitPayTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSplitPayTransactionWithEncryptedTrackData">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessSplitPayTransactionWithEncryptedTrackData" message="tns:SPSService_ProcessSplitPayTransactionWithEncryptedTrackData_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ProcessSplitPayTransactionWithEncryptedTrackDataResponse" message="tns:SPSService_ProcessSplitPayTransactionWithEncryptedTrackData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseSplitPayTransaction">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/ReverseSplitPayTransaction" message="tns:SPSService_ReverseSplitPayTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/ReverseSplitPayTransactionResponse" message="tns:SPSService_ReverseSplitPayTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/VoidPayment" message="tns:SPSService_VoidPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/VoidPaymentResponse" message="tns:SPSService_VoidPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditPayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreditPayment" message="tns:SPSService_CreditPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/CreditPaymentResponse" message="tns:SPSService_CreditPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundPaymentWithTransactionHistoryID">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPaymentWithTransactionHistoryID" message="tns:SPSService_RefundPaymentWithTransactionHistoryID_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPaymentWithTransactionHistoryIDResponse" message="tns:SPSService_RefundPaymentWithTransactionHistoryID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundPayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPayment" message="tns:SPSService_RefundPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPaymentResponse" message="tns:SPSService_RefundPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PartialRefundPaymentWithTransactionHistoryID">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/PartialRefundPaymentWithTransactionHistoryID" message="tns:SPSService_PartialRefundPaymentWithTransactionHistoryID_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/PartialRefundPaymentWithTransactionHistoryIDResponse" message="tns:SPSService_PartialRefundPaymentWithTransactionHistoryID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PartialRefundPayment">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/PartialRefundPayment" message="tns:SPSService_PartialRefundPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/PartialRefundPaymentResponse" message="tns:SPSService_PartialRefundPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPaymentV2">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/VoidPaymentV2" message="tns:SPSService_VoidPaymentV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/VoidPaymentV2Response" message="tns:SPSService_VoidPaymentV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundPaymentV2">
+      <wsdl:input wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPaymentV2" message="tns:SPSService_RefundPaymentV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://propay.com/SPS/contracts/SPSService/RefundPaymentV2Response" message="tns:SPSService_RefundPaymentV2_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

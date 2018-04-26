@@ -1,0 +1,7 @@
+D:\28March\InsuranceWeb_OoldPorting\Insurance\bin\Insurance.dll
+D:\28March\InsuranceWeb_OoldPorting\Insurance\bin\Insurance.pdb
+D:\28March\InsuranceWeb_OoldPorting\Insurance\bin\Microsoft.Web.Infrastructure.dll
+D:\28March\InsuranceWeb_OoldPorting\Insurance\bin\Microsoft.Web.Infrastructure.xml
+D:\28March\InsuranceWeb_OoldPorting\Insurance\obj\x64\Release\Insurance.dll
+D:\28March\InsuranceWeb_OoldPorting\Insurance\obj\x64\Release\Insurance.pdb
+D:\28March\InsuranceWeb_OoldPorting\Insurance\obj\x64\Release\Insurance.csprojResolveAssemblyReference.cache

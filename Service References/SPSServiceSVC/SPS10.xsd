@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Structures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Structures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Enums" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common" />
+  <xs:complexType name="EncryptedTracks">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common" base="q1:BaseDataContract">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Propay.Contracts.Common.Enums" minOccurs="0" name="DeviceType" type="q2:EncryptingDeviceType" />
+          <xs:element minOccurs="0" name="EncryptedTrack2Data" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="EncryptedTrackData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="KeySerialNumber" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EncryptedTracks" nillable="true" type="tns:EncryptedTracks" />
+</xs:schema>

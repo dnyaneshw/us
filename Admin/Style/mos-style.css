@@ -1,0 +1,144 @@
+html 
+{
+    margin: auto;
+}
+body 
+{
+	background: url(../Images/latar.jpg);
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	font-size: 12px;
+	color: #2e2e2e;
+	text-align: center;
+    max-width: 1100px;
+    margin: 0 auto !important;
+    float: none !important;
+
+}
+.clear 
+{
+    clear: both;
+}
+input 
+{
+padding: 4px;color: #5b5b5b;
+-moz-border-radius: 3px;-webkit-border-radius: 3px;-o-border-radius: 3px;
+}
+
+.button 
+{
+cursor: pointer;
+padding: 4px 10px 4px 10px;
+color: #fff;
+background: url(../Images/green.jpg) repeat left center;
+border: 1px solid #71bb3b;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+}
+.button:hover { color: #2e2e2e;}
+.button:active { background: #71bb3b; color: #fff;}
+
+.headLoginForm {
+	/*width: 380px;*/
+	padding: 5px 0 5px 10px;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	text-align: left;
+	height: 20px;
+	border-bottom: 1px solid #dcdcdc;
+	background: url(../Images/headerbg.png) repeat left center;
+	-moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px;
+}
+input.login 
+{
+margin: 5px 0 10px 0px;
+padding: 0 10px;
+height: 27px;
+color: #747474;
+background: rgba(240, 215, 215, 0.16);
+border: 0;
+border-radius: 5px;
+-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+
+input.login: hover 
+{
+border: 2px solid #E0A559;
+background: #E7E7E7;
+padding: 0 10px;
+width: 300px;
+height: 30px;
+color: #bbb;
+text-shadow: 1px 1px 1px black;
+background: rgba(0, 0, 0, 0.16);
+border: 0;
+border-radius: 5px;
+-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+.fieldLogin 
+{
+margin: 5px 0px 0 60px;
+background-color: #353535;
+}
+
+.logbtn 
+{
+ -moz-box-shadow:inset 0px 1px 0px 0px #292929;
+ -webkit-box-shadow:inset 0px 1px 0px 0px #292929;
+ box-shadow:inset 0px 1px 0px 0px #292929;
+ background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #575657), color-stop(1, #000000) );
+ background:-moz-linear-gradient( center top, #575657 5%, #000000 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#575657', endColorstr='#000000');
+ background-color:#575657;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:6px;
+ border: 1px solid #535353 !important;
+ display:inline-block;
+ color:#d6d6d6;
+ font-family:arial;
+ font-size:15px;
+ font-weight:normal;
+ padding:5px 14px;
+ text-decoration:none;
+ text-shadow:0px 0px 0px #ffffff;
+ margin:5px;
+}
+.logbtn:hover 
+{
+ background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #575657) );
+ background:-moz-linear-gradient( center top, #000000 5%, #575657 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#575657');
+ background-color:#000000;
+ color:White;
+}
+.logbtn:active 
+{
+ position:relative;
+ top:1px;
+}
+
+#loginForm 
+{
+max-width: 300px;
+max-height: 260px;
+border: 1px solid #dcdcdc;
+float: center;
+text-align: left;
+background: #353535 url(../Images/lock.png) no-repeat left center;
+margin: 140px auto 0 auto;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+color: rgb(173, 168, 168);
+-moz-box-shadow: 3px 3px 31px 6px #727272;
+-webkit-box-shadow: 3px 3px 5px 6px #464242;
+box-shadow: 3px 3px 31px 6px #686868;
+}
+

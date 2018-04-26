@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://propay.com/SPS/contracts" elementFormDefault="qualified" targetNamespace="http://propay.com/SPS/contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd2" namespace="http://propay.com/SPS/types" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" />
+  <xs:import schemaLocation="http://protectpaytest.propay.com/API/SPS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="CreateMerchantProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q1:ID" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="merchantProfile" nillable="true" type="q2:MerchantProfileData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMerchantProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="CreateMerchantProfileResult" nillable="true" type="q3:CreateMerchantProfileResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q4:ID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="GetMerchantProfilesResult" nillable="true" type="q5:GetMerchantProfilesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditMerchantProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q6:ID" />
+        <xs:element minOccurs="0" name="profileId" type="xs:long" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="merchantProfile" nillable="true" type="q7:MerchantProfileData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditMerchantProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://propay.com/SPS/types" minOccurs="0" name="EditMerchantProfileResult" nillable="true" type="q8:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMerchantProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q9:ID" />
+        <xs:element minOccurs="0" name="profileId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMerchantProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://propay.com/SPS/types" minOccurs="0" name="DeleteMerchantProfileResult" nillable="true" type="q10:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupportedPaymentProcessors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q11:ID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupportedPaymentProcessorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="SupportedPaymentProcessorsResult" nillable="true" type="q12:SupportedPaymentProcessorsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupportedProcessorFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q13:ID" />
+        <xs:element minOccurs="0" name="processor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupportedProcessorFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="SupportedProcessorFieldsResult" nillable="true" type="q14:SupportedProcessorFieldsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExternalPaymentMethodTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q15:ID" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" minOccurs="0" name="externalPaymentMethodTransaction" nillable="true" type="q16:ExternalPaymentMethodTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExternalPaymentMethodTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://propay.com/SPS/types" minOccurs="0" name="ProcessExternalPaymentMethodTransactionResult" nillable="true" type="q17:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeExternalPaymentMethodTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q18:ID" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" minOccurs="0" name="externalPaymentMethodTransaction" nillable="true" type="q19:ExternalPaymentMethodTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeExternalPaymentMethodTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://propay.com/SPS/types" minOccurs="0" name="AuthorizeExternalPaymentMethodTransactionResult" nillable="true" type="q20:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExternalPaymentMethodSplitPayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q21:ID" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" minOccurs="0" name="externalPaymentMethodSplitPayTransaction" nillable="true" type="q22:ExternalPaymentMethodSplitPayTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExternalPaymentMethodSplitPayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="ProcessExternalPaymentMethodSplitPayTransactionResult" nillable="true" type="q23:SplitPayTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateHostedTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q24:ID" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="hostedTransaction" nillable="true" type="q25:HostedTransactionDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateHostedTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://propay.com/SPS/types" minOccurs="0" name="CreateHostedTransactionResult" nillable="true" type="q26:CreateHostedTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHostedTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hostedTransactionIdentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHostedTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://propay.com/SPS/types" minOccurs="0" name="GetHostedTransactionResult" nillable="true" type="q27:GetHostedTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateHostedResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q28:ID" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="hostedResult" nillable="true" type="q29:HostedTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateHostedResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://propay.com/SPS/types" minOccurs="0" name="CreateHostedResultResult" nillable="true" type="q30:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHostedResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q31:ID" />
+        <xs:element minOccurs="0" name="hostedTransactionIdentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHostedResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://propay.com/SPS/types" minOccurs="0" name="GetHostedResultResult" nillable="true" type="q32:GetHostedResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoUpdatePaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q33:ID" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" minOccurs="0" name="autoUpdatePaymentMethodRequest" nillable="true" type="q34:AutoUpdatePaymentMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoUpdatePaymentMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External.SPSServiceData" minOccurs="0" name="AutoUpdatePaymentMethodResult" nillable="true" type="q35:AutoUpdatePaymentMethodResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentMethodExpirationOffset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q36:ID" />
+        <xs:element minOccurs="0" name="numberOfDays" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentMethodExpirationOffsetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://propay.com/SPS/types" minOccurs="0" name="UpdatePaymentMethodExpirationOffsetResult" nillable="true" type="q37:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q38:ID" />
+        <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePayerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://propay.com/SPS/types" minOccurs="0" name="CreatePayerResult" nillable="true" type="q39:CreateAccountInformationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePayerWithData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q40:ID" />
+        <xs:element xmlns:q41="http://propay.com/SPS/types" minOccurs="0" name="data" nillable="true" type="q41:PayerData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePayerWithDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://propay.com/SPS/types" minOccurs="0" name="CreatePayerWithDataResult" nillable="true" type="q42:CreateAccountInformationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAuthToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q43:ID" />
+        <xs:element minOccurs="0" name="userIdentityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAuthTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://propay.com/SPS/types" minOccurs="0" name="CreateAuthTokenResult" nillable="true" type="q44:CreateAuthTokenResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeAuthToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q45:ID" />
+        <xs:element minOccurs="0" name="userIdentityId" type="xs:int" />
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeAuthTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://propay.com/SPS/types" minOccurs="0" name="RevokeAuthTokenResult" nillable="true" type="q46:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeAllAuthTokens">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q47:ID" />
+        <xs:element minOccurs="0" name="userIdentityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeAllAuthTokensResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://propay.com/SPS/types" minOccurs="0" name="RevokeAllAuthTokensResult" nillable="true" type="q48:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q49:ID" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="info" nillable="true" type="q50:UserInfo" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="userRights" nillable="true" type="q51:ArrayOfUserRight" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="CreateUserResult" nillable="true" type="q52:CreateUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q53:ID" />
+        <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPayerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://propay.com/SPS/types" minOccurs="0" name="EditPayerResult" nillable="true" type="q54:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPayerV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q55:ID" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q56:EditPayerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPayerV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://propay.com/SPS/types" minOccurs="0" name="EditPayerV2Result" nillable="true" type="q57:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q58:ID" />
+        <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePayerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://propay.com/SPS/types" minOccurs="0" name="DeletePayerResult" nillable="true" type="q59:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q60:ID" />
+        <xs:element xmlns:q61="http://propay.com/SPS/types" minOccurs="0" name="pmAdd" nillable="true" type="q61:PaymentMethodAdd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://propay.com/SPS/types" minOccurs="0" name="CreatePaymentMethodResult" nillable="true" type="q62:CreatePaymentMethodResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentMethodFromEncryptedTrackData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q63:ID" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q64:AddEncryptedTrackPaymentMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentMethodFromEncryptedTrackDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://propay.com/SPS/types" minOccurs="0" name="CreatePaymentMethodFromEncryptedTrackDataResult" nillable="true" type="q65:CreatePaymentMethodResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q66:ID" />
+        <xs:element xmlns:q67="http://propay.com/SPS/types" minOccurs="0" name="pmu" nillable="true" type="q67:PaymentMethodUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPaymentMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://propay.com/SPS/types" minOccurs="0" name="EditPaymentMethodResult" nillable="true" type="q68:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPaymentMethodPriority">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q69:ID" />
+        <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="paymentID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="priority" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPaymentMethodPriorityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://propay.com/SPS/types" minOccurs="0" name="EditPaymentMethodPriorityResult" nillable="true" type="q70:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q71:ID" />
+        <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="paymentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePaymentMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://propay.com/SPS/types" minOccurs="0" name="DeletePaymentMethodResult" nillable="true" type="q72:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempTokensForPayerEdit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q73:ID" />
+        <xs:element xmlns:q74="http://propay.com/SPS/types" minOccurs="0" name="payerInfo" nillable="true" type="q74:PayerInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempTokensForPayerEditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://propay.com/SPS/types" minOccurs="0" name="GetTempTokensForPayerEditResult" nillable="true" type="q75:TempTokensForPayerEditResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://propay.com/SPS/types" minOccurs="0" name="tempTokenRequest" nillable="true" type="q76:TempTokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://propay.com/SPS/types" minOccurs="0" name="GetTempTokenResult" nillable="true" type="q77:TempTokenResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayerPaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://propay.com/SPS/types" minOccurs="0" name="billerIdentification" nillable="true" type="q78:ID" />
+        <xs:element minOccurs="0" name="payerAccountID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q79="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q79:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayerPaymentMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://propay.com/SPS/types" minOccurs="0" name="GetPayerPaymentMethodResult" nillable="true" type="q80:PaymentMethodsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPayerPaymentMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://propay.com/SPS/types" minOccurs="0" name="billerIdentification" nillable="true" type="q81:ID" />
+        <xs:element minOccurs="0" name="payerAccountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPayerPaymentMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://propay.com/SPS/types" minOccurs="0" name="GetAllPayerPaymentMethodsResult" nillable="true" type="q82:PaymentMethodsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://propay.com/SPS/types" minOccurs="0" name="request" nillable="true" type="q83:FindPaymentMethodsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://propay.com/SPS/types" minOccurs="0" name="FindPaymentMethodsResult" nillable="true" type="q84:FindPaymentMethodsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://propay.com/SPS/types" minOccurs="0" name="billerId" nillable="true" type="q85:ID" />
+        <xs:element xmlns:q86="http://propay.com/SPS/types" minOccurs="0" name="criteria" nillable="true" type="q86:PayerData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://propay.com/SPS/types" minOccurs="0" name="GetPayersResult" nillable="true" type="q87:GetPayersResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q88:ID" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q89:ProcessCardRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="ProcessCardResult" nillable="true" type="q90:ProcessCardResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://propay.com/SPS/types" minOccurs="0" name="identification" nillable="true" type="q91:ID" />
+        <xs:element xmlns:q92="http://propay.com/SPS/types" minOccurs="0" name="transactionInfo" nillable="true" type="q92:Transaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://propay.com/SPS/types" minOccurs="0" name="ProcessPaymentResult" nillable="true" type="q93:ProcessPaymentResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizePaymentMethodTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q94:ID" />
+        <xs:element xmlns:q95="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q95:Transaction" />
+        <xs:element xmlns:q96="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q96:guid" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="optionalPaymentInfoOverrides" nillable="true" type="q97:PaymentInfoOverrides" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizePaymentMethodTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://propay.com/SPS/types" minOccurs="0" name="AuthorizePaymentMethodTransactionResult" nillable="true" type="q98:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizePaymentMethodTransactionRecurring">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q99:ID" />
+        <xs:element xmlns:q100="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q100:Transaction" />
+        <xs:element xmlns:q101="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q101:guid" />
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="optionalPaymentInfoOverrides" nillable="true" type="q102:PaymentInfoOverrides" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizePaymentMethodTransactionRecurringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://propay.com/SPS/types" minOccurs="0" name="AuthorizePaymentMethodTransactionRecurringResult" nillable="true" type="q103:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeAndProcessEncryptedTrackData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q104:ID" />
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q105:AuthAndProcessEncryptedTrackDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeAndProcessEncryptedTrackDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="AuthorizeAndProcessEncryptedTrackDataResult" nillable="true" type="q106:AuthAndProcessEncryptedTrackDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapturePaymentV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q107:ID" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q108:CaptureRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapturePaymentV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://propay.com/SPS/types" minOccurs="0" name="CapturePaymentV2Result" nillable="true" type="q109:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapturePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q110:ID" />
+        <xs:element xmlns:q111="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q111:Transaction" />
+        <xs:element minOccurs="0" name="originalTransactionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CapturePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://propay.com/SPS/types" minOccurs="0" name="CapturePaymentResult" nillable="true" type="q112:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPaymentMethodTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q113:ID" />
+        <xs:element xmlns:q114="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q114:Transaction" />
+        <xs:element xmlns:q115="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q115:guid" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="optionalPaymentInfoOverrides" nillable="true" type="q116:PaymentInfoOverrides" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPaymentMethodTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://propay.com/SPS/types" minOccurs="0" name="ProcessPaymentMethodTransactionResult" nillable="true" type="q117:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPaymentMethodTransactionRecurring">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q118:ID" />
+        <xs:element xmlns:q119="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q119:Transaction" />
+        <xs:element xmlns:q120="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q120:guid" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="optionalPaymentInfoOverrides" nillable="true" type="q121:PaymentInfoOverrides" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPaymentMethodTransactionRecurringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://propay.com/SPS/types" minOccurs="0" name="ProcessPaymentMethodTransactionRecurringResult" nillable="true" type="q122:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSplitPayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q123:ID" />
+        <xs:element xmlns:q124="http://propay.com/SPS/types" minOccurs="0" name="request" nillable="true" type="q124:SplitPayTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSplitPayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="ProcessSplitPayTransactionResult" nillable="true" type="q125:SplitPayTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSplitPayTransactionWithEncryptedTrackData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q126:ID" />
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q127:EncryptedSplitPayTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSplitPayTransactionWithEncryptedTrackDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="ProcessSplitPayTransactionWithEncryptedTrackDataResult" nillable="true" type="q128:SplitPayTransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseSplitPayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q129:ID" />
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q130:SplitPayTransactionReversalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReverseSplitPayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="ReverseSplitPayTransactionResult" nillable="true" type="q131:SplitPayTransactionReversalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q132:ID" />
+        <xs:element minOccurs="0" name="originalTransactionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://propay.com/SPS/types" minOccurs="0" name="VoidPaymentResult" nillable="true" type="q133:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q134:ID" />
+        <xs:element xmlns:q135="http://propay.com/SPS/types" minOccurs="0" name="transaction" nillable="true" type="q135:Transaction" />
+        <xs:element xmlns:q136="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="paymentMethodID" type="q136:guid" />
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="paymentInfoOverrides" nillable="true" type="q137:PaymentInfoOverrides" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://propay.com/SPS/types" minOccurs="0" name="CreditPaymentResult" nillable="true" type="q138:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPaymentWithTransactionHistoryID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q139:ID" />
+        <xs:element minOccurs="0" name="transactionHistoryID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPaymentWithTransactionHistoryIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://propay.com/SPS/types" minOccurs="0" name="RefundPaymentWithTransactionHistoryIDResult" nillable="true" type="q140:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q141:ID" />
+        <xs:element minOccurs="0" name="originalTransactionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://propay.com/SPS/types" minOccurs="0" name="RefundPaymentResult" nillable="true" type="q142:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialRefundPaymentWithTransactionHistoryID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q143:ID" />
+        <xs:element minOccurs="0" name="transactionHistoryID" type="xs:long" />
+        <xs:element minOccurs="0" name="amount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialRefundPaymentWithTransactionHistoryIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://propay.com/SPS/types" minOccurs="0" name="PartialRefundPaymentWithTransactionHistoryIDResult" nillable="true" type="q144:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialRefundPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q145:ID" />
+        <xs:element minOccurs="0" name="originalTransactionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialRefundPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://propay.com/SPS/types" minOccurs="0" name="PartialRefundPaymentResult" nillable="true" type="q146:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidPaymentV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q147:ID" />
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q148:VoidRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidPaymentV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://propay.com/SPS/types" minOccurs="0" name="VoidPaymentV2Result" nillable="true" type="q149:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPaymentV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://propay.com/SPS/types" minOccurs="0" name="id" nillable="true" type="q150:ID" />
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/Propay.Contracts.SPS.External" minOccurs="0" name="request" nillable="true" type="q151:RefundRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefundPaymentV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://propay.com/SPS/types" minOccurs="0" name="RefundPaymentV2Result" nillable="true" type="q152:TransactionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

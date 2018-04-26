@@ -1,0 +1,1017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B8D4E50-D545-46D0-9517-87FEB21D6A36}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Insurance</RootNamespace>
+    <AssemblyName>Insurance</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50831.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\25AprilBuild\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=1.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.9.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="ConvertToTable">
+      <HintPath>..\Dependency\ConvertToTable.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NativeExcel">
+      <HintPath>..\Dependency\NativeExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangeEmailAddress.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\EditProfilePage.aspx" />
+    <Content Include="Account\ViewProfilePage.aspx" />
+    <Content Include="Admin\AdminCompanyAffilation.aspx" />
+    <Content Include="Admin\AdminContracts.aspx" />
+    <Content Include="Admin\AdminContractsList.aspx" />
+    <Content Include="Admin\AdminCustomerEvidenceCertificate.aspx" />
+    <Content Include="Admin\AdminCustomerList.aspx" />
+    <Content Include="Admin\AdminCustomerInformation.aspx" />
+    <Content Include="Admin\AdminLandingPage.aspx" />
+    <Content Include="Admin\AdminReport.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Style\mos-style.css" />
+    <Content Include="Admin\UserControl\ucAdminLogin.ascx" />
+    <Content Include="Admin\UserControl\ucAdminMenu.ascx" />
+    <Content Include="Admin\UserControl\ucAdminUploadedDocument.ascx" />
+    <Content Include="Admin\UserControl\ucCustomerInformation.ascx" />
+    <Content Include="Affiliates.aspx" />
+    <Content Include="App_Data\aspnet-InsurancePoc-20150305233058.mdf" />
+    <Content Include="App_Data\aspnet-InsurancePoc-20150305233058_log.ldf">
+      <DependentUpon>aspnet-InsurancePoc-20150305233058.mdf</DependentUpon>
+    </Content>
+    <Content Include="Certificate.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\footable.svg" />
+    <Content Include="Content\footable.core.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Contract.aspx" />
+    <Content Include="Disclaimer.aspx" />
+    <Content Include="EmailTemplate\RenewMailTemplate.html" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Faq.aspx" />
+    <Content Include="FillCertiInfo.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\404-error.jpg" />
+    <Content Include="Images\a17.png" />
+    <Content Include="Images\a21.png" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\accentHero.png" />
+    <Content Include="Images\Atainlogo.jpg" />
+    <Content Include="Images\Attain_logo.png" />
+    <Content Include="Images\b21.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\Banner_2B.jpg" />
+    <Content Include="Images\bgimg2.jpg" />
+    <Content Include="Images\bimg1.jpg" />
+    <Content Include="Images\bimg1000.jpg" />
+    <Content Include="Images\bimg2000.jpg" />
+    <Content Include="Images\bimg3.jpg" />
+    <Content Include="Images\bt_close.png" />
+    <Content Include="Images\bt_open0.png" />
+    <Content Include="Images\bt_regis.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\Capture.png" />
+    <Content Include="Images\checked.png" />
+    <Content Include="Images\commodo.png" />
+    <Content Include="Images\comodo.png" />
+    <Content Include="Images\containe.jpg" />
+    <Content Include="Images\CreditCardsUse.png" />
+    <Content Include="Images\cross_icon_normal.png" />
+    <Content Include="Images\Enroll.jpg" />
+    <Content Include="Images\error.jpg" />
+    <Content Include="Images\Evidence.jpg" />
+    <Content Include="Images\footer-b.jpg" />
+    <Content Include="Images\footeradmin.jpg" />
+    <Content Include="Images\footerPaint.png" />
+    <Content Include="Images\GenerateCertificate.jpg" />
+    <Content Include="Images\headingUnderline.gif" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\IDS_Logo.jpg" />
+    <Content Include="Images\image.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo1.png" />
+    <Content Include="Images\logosm.jpg" />
+    <Content Include="Images\menu-bg0.jpg" />
+    <Content Include="Images\menuLeft.png" />
+    <Content Include="Images\menuPaint.png" />
+    <Content Include="Images\menuRight.png" />
+    <Content Include="Images\PayAndGenerateEvidence.jpg" />
+    <Content Include="Images\Print.jpg" />
+    <Content Include="Images\register.png" />
+    <Content Include="Images\Renew.jpg" />
+    <Content Include="Images\Stage_BG_btm.png" />
+    <Content Include="Images\tab_b000.png" />
+    <Content Include="Images\tab_l000.png" />
+    <Content Include="Images\tab_m000.png" />
+    <Content Include="Images\tab_r000.png" />
+    <Content Include="Images\titlebar_bg.jpg" />
+    <Content Include="Images\tl_transp.gif" />
+    <Content Include="Images\WaddellInsurance.jpg" />
+    <Content Include="Images\WaddellInsurance.png" />
+    <Content Include="img\footable.png" />
+    <Content Include="img\minus.png" />
+    <Content Include="img\New folder\minus - Copy.png" />
+    <Content Include="img\New folder\minus.png" />
+    <Content Include="img\New folder\plus - Copy.png" />
+    <Content Include="img\New folder\plus.png" />
+    <Content Include="img\plus.png" />
+    <Content Include="legal.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="PaymentSucced.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProofEvidence.aspx" />
+    <Content Include="Reason.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Scripts\footable.js" />
+    <Content Include="Scripts\jssor.js" />
+    <Content Include="Scripts\jssor.slider.js" />
+    <Content Include="Scripts\Validate.js" />
+    <Content Include="Service References\ManageUserSVC\Insurance.ManageUserSVC.usp_GetCertificateByIDResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ManageUserSVC\Insurance.ManageUserSVC.usp_GetCertificatesByCustomerIDResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ManageUserSVC\Insurance.ManageUserSVC.usp_GetEvedenceDataByEVEIDResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ManageUserSVC\Insurance.ManageUserSVC.usp_GetEvedenceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ManageUserSVC\ManageUser.disco" />
+    <Content Include="Service References\ManageUserSVC\configuration91.svcinfo" />
+    <Content Include="Service References\ManageUserSVC\configuration.svcinfo" />
+    <Content Include="Service References\ManageUserSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service References\OtherSVC\Other.disco" />
+    <Content Include="Service References\OtherSVC\configuration91.svcinfo" />
+    <Content Include="Service References\OtherSVC\configuration.svcinfo" />
+    <Content Include="Service References\OtherSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.AuthAndProcessEncryptedTrackDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.AutoUpdatePaymentMethodResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreateAccountInformationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreateAuthTokenResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreateHostedTransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreateMerchantProfileResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreatePaymentMethodResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.CreateUserResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.FindPaymentMethodsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.GetHostedResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.GetHostedTransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.GetMerchantProfilesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.GetPayersResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.PaymentMethodsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.ProcessCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.ProcessPaymentResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.SplitPayTransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.SplitPayTransactionReversalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.SupportedPaymentProcessorsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.SupportedProcessorFieldsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.TempTokenResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.TempTokensForPayerEditResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\Insurance.SPSServiceSVC.TransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SPSServiceSVC\SPS.disco" />
+    <Content Include="Service References\SPSServiceSVC\configuration91.svcinfo" />
+    <Content Include="Service References\SPSServiceSVC\configuration.svcinfo" />
+    <Content Include="Service References\SPSServiceSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="UserControl\ucBanner.ascx" />
+    <Content Include="UserControl\ucCertificateInformation.ascx" />
+    <Content Include="UserControl\ucCoverage.ascx" />
+    <Content Include="UserControl\ucCreditCardInformation.ascx" />
+    <Content Include="UserControl\ucEnroll.ascx" />
+    <Content Include="UserControl\ucEnrollDescription.ascx" />
+    <Content Include="UserControl\ucForgotPassword.ascx" />
+    <Content Include="UserControl\ucLogin.ascx" />
+    <Content Include="UserControl\ucPopUpControl.ascx" />
+    <Content Include="UserControl\ucProduct.ascx" />
+    <Content Include="UserControl\ucProfile.ascx" />
+    <Content Include="UserControl\ucUploadedDocument.ascx" />
+    <Content Include="Validate.aspx" />
+    <Content Include="View.aspx" />
+    <Content Include="WkHtml\libgcc_s_dw2-1.dll" />
+    <Content Include="WkHtml\wkhtmltopdf.exe" />
+    <Content Include="wthvideo\dscoverage01.png" />
+    <Content Include="wthvideo\dscoverage01ipad.mp4" />
+    <Content Include="wthvideo\PlayVideo.png" />
+    <Content Include="wthvideo\wthplayer.swf" />
+    <Content Include="wthvideo\wthvideo.js" />
+    <Content Include="wthvideo\_notes\dwsync.xml" />
+    <Content Include="AdminInsuranceMasterPage.Master" />
+    <Content Include="less\footable.core.less" />
+    <Content Include="less\footable.metro.less" />
+    <Content Include="less\footable.standalone.less" />
+    <Content Include="Content\fonts\footable.eot" />
+    <Content Include="Content\fonts\footable.ttf" />
+    <Content Include="Content\fonts\footable.woff" />
+    <Content Include="Downloads\H-1B Questionnaire for Employee.pdf" />
+    <None Include="Properties\PublishProfiles\Insurance.pubxml" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="WkHtml\OneNote Table Of Contents.onetoc2" />
+    <Content Include="wthvideo\dscoverage01.flv" />
+    <Content Include="ViewDoc.ashx" />
+    <Content Include="Service References\ManageUserSVC\ManageUser.wsdl" />
+    <None Include="Service References\ManageUserSVC\ManageUser.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ManageUserSVC\ManageUser1.wsdl" />
+    <None Include="Service References\ManageUserSVC\ManageUser1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManageUserSVC\ManageUser2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManageUserSVC\ManageUser3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManageUserSVC\ManageUser4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\OtherSVC\Other.wsdl" />
+    <None Include="Service References\OtherSVC\Other.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\OtherSVC\Other1.wsdl" />
+    <None Include="Service References\OtherSVC\Other1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangeEmailAddress.aspx.cs">
+      <DependentUpon>ChangeEmailAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangeEmailAddress.aspx.designer.cs">
+      <DependentUpon>ChangeEmailAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EditProfilePage.aspx.cs">
+      <DependentUpon>EditProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditProfilePage.aspx.designer.cs">
+      <DependentUpon>EditProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ViewProfilePage.aspx.cs">
+      <DependentUpon>ViewProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ViewProfilePage.aspx.designer.cs">
+      <DependentUpon>ViewProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCompanyAffilation.aspx.cs">
+      <DependentUpon>AdminCompanyAffilation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCompanyAffilation.aspx.designer.cs">
+      <DependentUpon>AdminCompanyAffilation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminContracts.aspx.cs">
+      <DependentUpon>AdminContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminContracts.aspx.designer.cs">
+      <DependentUpon>AdminContracts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminContractsList.aspx.cs">
+      <DependentUpon>AdminContractsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminContractsList.aspx.designer.cs">
+      <DependentUpon>AdminContractsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerEvidenceCertificate.aspx.cs">
+      <DependentUpon>AdminCustomerEvidenceCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerEvidenceCertificate.aspx.designer.cs">
+      <DependentUpon>AdminCustomerEvidenceCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerList.aspx.cs">
+      <DependentUpon>AdminCustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerList.aspx.designer.cs">
+      <DependentUpon>AdminCustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerInformation.aspx.cs">
+      <DependentUpon>AdminCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerInformation.aspx.designer.cs">
+      <DependentUpon>AdminCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInsuranceMasterPage.Master.cs">
+      <DependentUpon>AdminInsuranceMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminInsuranceMasterPage.Master.designer.cs">
+      <DependentUpon>AdminInsuranceMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLandingPage.aspx.cs">
+      <DependentUpon>AdminLandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLandingPage.aspx.designer.cs">
+      <DependentUpon>AdminLandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminReport.aspx.cs">
+      <DependentUpon>AdminReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminReport.aspx.designer.cs">
+      <DependentUpon>AdminReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminLogin.ascx.cs">
+      <DependentUpon>ucAdminLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminLogin.ascx.designer.cs">
+      <DependentUpon>ucAdminLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminMenu.ascx.cs">
+      <DependentUpon>ucAdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminMenu.ascx.designer.cs">
+      <DependentUpon>ucAdminMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminUploadedDocument.ascx.cs">
+      <DependentUpon>ucAdminUploadedDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucAdminUploadedDocument.ascx.designer.cs">
+      <DependentUpon>ucAdminUploadedDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucCustomerInformation.ascx.cs">
+      <DependentUpon>ucCustomerInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControl\ucCustomerInformation.ascx.designer.cs">
+      <DependentUpon>ucCustomerInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Affiliates.aspx.cs">
+      <DependentUpon>Affiliates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affiliates.aspx.designer.cs">
+      <DependentUpon>Affiliates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Certificate.aspx.cs">
+      <DependentUpon>Certificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Certificate.aspx.designer.cs">
+      <DependentUpon>Certificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFunction.cs" />
+    <Compile Include="Contract.aspx.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract.aspx.designer.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Crypto.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disclaimer.aspx.cs">
+      <DependentUpon>Disclaimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disclaimer.aspx.designer.cs">
+      <DependentUpon>Disclaimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FillCertiInfo.aspx.cs">
+      <DependentUpon>FillCertiInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FillCertiInfo.aspx.designer.cs">
+      <DependentUpon>FillCertiInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="legal.aspx.cs">
+      <DependentUpon>legal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="legal.aspx.designer.cs">
+      <DependentUpon>legal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogWritter.cs" />
+    <Compile Include="PaymentSucced.aspx.cs">
+      <DependentUpon>PaymentSucced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSucced.aspx.designer.cs">
+      <DependentUpon>PaymentSucced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProofEvidence.aspx.cs">
+      <DependentUpon>ProofEvidence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProofEvidence.aspx.designer.cs">
+      <DependentUpon>ProofEvidence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reason.aspx.cs">
+      <DependentUpon>Reason.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reason.aspx.designer.cs">
+      <DependentUpon>Reason.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManageUserSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OtherSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPSServiceSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucBanner.ascx.cs">
+      <DependentUpon>ucBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucBanner.ascx.designer.cs">
+      <DependentUpon>ucBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCertificateInformation.ascx.cs">
+      <DependentUpon>ucCertificateInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCertificateInformation.ascx.designer.cs">
+      <DependentUpon>ucCertificateInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCoverage.ascx.cs">
+      <DependentUpon>ucCoverage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCoverage.ascx.designer.cs">
+      <DependentUpon>ucCoverage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCreditCardInformation.ascx.cs">
+      <DependentUpon>ucCreditCardInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCreditCardInformation.ascx.designer.cs">
+      <DependentUpon>ucCreditCardInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucEnroll.ascx.cs">
+      <DependentUpon>ucEnroll.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucEnroll.ascx.designer.cs">
+      <DependentUpon>ucEnroll.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucEnrollDescription.ascx.cs">
+      <DependentUpon>ucEnrollDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucEnrollDescription.ascx.designer.cs">
+      <DependentUpon>ucEnrollDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucForgotPassword.ascx.cs">
+      <DependentUpon>ucForgotPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucForgotPassword.ascx.designer.cs">
+      <DependentUpon>ucForgotPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucLogin.ascx.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLogin.ascx.designer.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucPopUpControl.ascx.cs">
+      <DependentUpon>ucPopUpControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucPopUpControl.ascx.designer.cs">
+      <DependentUpon>ucPopUpControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucProduct.ascx.cs">
+      <DependentUpon>ucProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucProduct.ascx.designer.cs">
+      <DependentUpon>ucProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucProfile.ascx.cs">
+      <DependentUpon>ucProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucProfile.ascx.designer.cs">
+      <DependentUpon>ucProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucUploadedDocument.ascx.cs">
+      <DependentUpon>ucUploadedDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucUploadedDocument.ascx.designer.cs">
+      <DependentUpon>ucUploadedDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Validate.aspx.cs">
+      <DependentUpon>Validate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validate.aspx.designer.cs">
+      <DependentUpon>Validate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDoc.ashx.cs">
+      <DependentUpon>ViewDoc.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service References\SPSServiceSVC\SPS.wsdl" />
+    <None Include="Service References\SPSServiceSVC\SPS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\SPSServiceSVC\SPS1.wsdl" />
+    <None Include="Service References\SPSServiceSVC\SPS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\SPSServiceSVC\SPS2.wsdl" />
+    <None Include="Service References\SPSServiceSVC\SPS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPSServiceSVC\SPS9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ManageUserSVC\" />
+    <WCFMetadataStorage Include="Service References\OtherSVC\" />
+    <WCFMetadataStorage Include="Service References\SPSServiceSVC\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>12345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3151/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

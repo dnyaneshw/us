@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\InsuranceProject\US\SourceCode\Builds\21March2018Build</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>03/11/2018 07:13:43</publishTime>
+    </File>
+    <File Include="Account/ChangeEmailAddress.aspx">
+      <publishTime>03/11/2018 07:13:43</publishTime>
+    </File>
+    <File Include="Account/ChangePassword.aspx">
+      <publishTime>03/11/2018 07:13:43</publishTime>
+    </File>
+    <File Include="Account/EditProfilePage.aspx">
+      <publishTime>03/11/2018 07:13:43</publishTime>
+    </File>
+    <File Include="Account/ViewProfilePage.aspx">
+      <publishTime>03/11/2018 07:13:43</publishTime>
+    </File>
+    <File Include="Admin/AdminCompanyAffilation.aspx">
+      <publishTime>03/11/2018 07:13:44</publishTime>
+    </File>
+    <File Include="Admin/AdminContracts.aspx">
+      <publishTime>03/11/2018 07:13:44</publishTime>
+    </File>
+    <File Include="Admin/AdminContractsList.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/AdminCustomerEvidanceCertificate.aspx">
+      <publishTime>04/29/2015 22:34:54</publishTime>
+    </File>
+    <File Include="Admin/AdminCustomerEvidenceCertificate.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/AdminCustomerInformation.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/AdminCustomerList.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/AdminLandingPage.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/AdminReport.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/Login.aspx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/Style/mos-style.css">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/UserControl/ucAdminLogin.ascx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/UserControl/ucAdminMenu.ascx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/UserControl/ucAdminUploadedDocument.ascx">
+      <publishTime>03/11/2018 07:13:45</publishTime>
+    </File>
+    <File Include="Admin/UserControl/ucCustomerInformation.ascx">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="AdminInsuranceMasterPage.Master">
+      <publishTime>03/21/2018 10:23:56</publishTime>
+    </File>
+    <File Include="Affiliates.aspx">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="App_Data/aspnet-InsurancePoc-20150305233058.mdf">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="App_Data/aspnet-InsurancePoc-20150305233058_log.ldf">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/ConvertToTable.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Insurance.dll">
+      <publishTime>03/21/2018 10:24:02</publishTime>
+    </File>
+    <File Include="bin/Insurance.pdb">
+      <publishTime>04/04/2015 04:20:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Membership.OpenAuth.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/08/2013 15:15:08</publishTime>
+    </File>
+    <File Include="bin/NativeExcel.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Certificate.aspx">
+      <publishTime>03/21/2018 11:13:01</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/fonts/footable.eot">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/fonts/footable.svg">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/fonts/footable.ttf">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/fonts/footable.woff">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/footable.core.css">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/11/2018 09:54:19</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>03/11/2018 07:13:46</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Contract.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Disclaimer.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Downloads/H-1B Questionnaire for Employee.pdf">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="EmailTemplate/RenewMailTemplate.html">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="ErrorPage.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Faq.aspx">
+      <publishTime>03/11/2018 10:32:21</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="FillCertiInfo.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="ForgotPassword.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>03/11/2018 07:13:47</publishTime>
+    </File>
+    <File Include="Images/404-error.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/a17.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/a21.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/accentHero.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Atainlogo.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Attain_logo.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/b21.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/back.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Banner_2B.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bgimg2.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bimg1.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bimg1000.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bimg2000.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bimg3.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bt_close.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bt_open0.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bt_regis.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Capture.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/checked.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/commodo.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/comodo.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/containe.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/CreditCardsUse.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/cross_icon_normal.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Enroll.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/error.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Evidence.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/footer-b.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/footeradmin.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/footerPaint.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/GenerateCertificate.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/headingUnderline.gif">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/help.png">
+      <publishTime>03/11/2018 10:01:08</publishTime>
+    </File>
+    <File Include="Images/IDS_Logo.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/image.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/loading.gif">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/lock.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/logo.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/logo1.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/logosm.jpg">
+      <publishTime>03/21/2018 10:30:52</publishTime>
+    </File>
+    <File Include="Images/menu-bg0.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/menuLeft.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/menuPaint.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/menuRight.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/PayAndGenerateEvidence.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Print.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/register.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Renew.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/Stage_BG_btm.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/tab_b000.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/tab_l000.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/tab_m000.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/tab_r000.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/titlebar_bg.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/tl_transp.gif">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/untitled.png">
+      <publishTime>04/04/2015 22:36:47</publishTime>
+    </File>
+    <File Include="Images/WaddellInsurance.jpg">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Images/WaddellInsurance.png">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="img/footable.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/minus.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/New folder/minus - Copy.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/New folder/minus.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/New folder/plus - Copy.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/New folder/plus.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="img/plus.png">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="legal.aspx">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="less/footable.core.less">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="less/footable.metro.less">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="less/footable.standalone.less">
+      <publishTime>03/11/2018 07:13:52</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/11/2018 07:14:11</publishTime>
+    </File>
+    <File Include="PaymentSucced.aspx">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="Product.aspx">
+      <publishTime>03/11/2018 07:13:48</publishTime>
+    </File>
+    <File Include="ProofEvidence.aspx">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataSet.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Reason.aspx">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Register.aspx">
+      <publishTime>03/11/2018 10:06:46</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/footable.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.min.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jssor.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jssor.slider.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.5.3.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/npm.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/Validate.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/configuration.svcinfo">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/configuration91.svcinfo">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/Insurance.ManageUserSVC.usp_GetCertificateByIDResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/Insurance.ManageUserSVC.usp_GetCertificatesByCustomerIDResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/Insurance.ManageUserSVC.usp_GetEvedenceDataByEVEIDResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/Insurance.ManageUserSVC.usp_GetEvedenceResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/ManageUser.disco">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/ManageUser.wsdl">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/ManageUser1.wsdl">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/ManageUserSVC/Reference.svcmap">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/configuration.svcinfo">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/configuration91.svcinfo">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/Other.disco">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/Other.wsdl">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/Other1.wsdl">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/OtherSVC/Reference.svcmap">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/configuration.svcinfo">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/configuration91.svcinfo">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.AuthAndProcessEncryptedTrackDataResponse.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.AutoUpdatePaymentMethodResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreateAccountInformationResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreateAuthTokenResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreateHostedTransactionResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreateMerchantProfileResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreatePaymentMethodResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.CreateUserResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.FindPaymentMethodsResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.GetHostedResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.GetHostedTransactionResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.GetMerchantProfilesResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.GetPayersResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.PaymentMethodsResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.ProcessCardResponse.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.ProcessPaymentResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.Result.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.SplitPayTransactionResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.SplitPayTransactionReversalResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.SupportedPaymentProcessorsResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.SupportedProcessorFieldsResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.TempTokenResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.TempTokensForPayerEditResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Insurance.SPSServiceSVC.TransactionResult.datasource">
+      <publishTime>03/11/2018 07:13:49</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/Reference.svcmap">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/SPS.disco">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/SPS.wsdl">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/SPS1.wsdl">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Service References/SPSServiceSVC/SPS2.wsdl">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucBanner.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucCertificateInformation.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucCoverage.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucCreditCardInformation.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucEnroll.ascx">
+      <publishTime>03/11/2018 09:41:29</publishTime>
+    </File>
+    <File Include="UserControl/ucEnrollDescription.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucForgotPassword.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucLogin.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucPopUpControl.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucProduct.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucProfile.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="UserControl/ucUploadedDocument.ascx">
+      <publishTime>03/11/2018 07:13:50</publishTime>
+    </File>
+    <File Include="Validate.aspx">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="VedioPopUp.aspx">
+      <publishTime>04/04/2015 14:13:28</publishTime>
+    </File>
+    <File Include="View.aspx">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="ViewDoc.ashx">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/21/2018 11:14:08</publishTime>
+    </File>
+    <File Include="WkHtml/libgcc_s_dw2-1.dll">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="WkHtml/OneNote Table Of Contents.onetoc2">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="WkHtml/wkhtmltopdf.exe">
+      <publishTime>03/11/2018 07:13:51</publishTime>
+    </File>
+    <File Include="wthvideo/dscoverage01.flv">
+      <publishTime>03/11/2018 07:14:12</publishTime>
+    </File>
+    <File Include="wthvideo/dscoverage01.png">
+      <publishTime>03/11/2018 07:14:12</publishTime>
+    </File>
+    <File Include="wthvideo/dscoverage01ipad.mp4">
+      <publishTime>03/11/2018 07:14:12</publishTime>
+    </File>
+    <File Include="wthvideo/PlayVideo.png">
+      <publishTime>03/11/2018 07:14:11</publishTime>
+    </File>
+    <File Include="wthvideo/wthplayer.swf">
+      <publishTime>03/11/2018 07:14:12</publishTime>
+    </File>
+    <File Include="wthvideo/wthvideo.js">
+      <publishTime>03/21/2018 10:41:18</publishTime>
+    </File>
+    <File Include="wthvideo/_notes/dwsync.xml">
+      <publishTime>03/11/2018 07:14:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

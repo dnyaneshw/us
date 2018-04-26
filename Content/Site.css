@@ -1,0 +1,683 @@
+﻿
+.center
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+}
+.Vedio_Frame 
+{
+    position: relative;
+    padding-bottom: 70%;
+    padding-top: 30px; height: 0; overflow: hidden;
+} 
+.Vedio_Frame iframe,
+.Vedio_Frame object,
+.Vedio_Frame embed 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.ModalPopupBG
+{
+	background-color:gray ;
+	filter: alpha(opacity=50);
+	opacity: 0.7;
+}
+
+.popup_Container 
+{
+	background-color:lightgray;
+	border:2px solid #000000;
+	padding: 0px 0px 0px 0px;
+
+    position:absolute !important;
+    max-height:600px;
+    max-width:700px; 
+    right:20% !important ;
+    left:20% !important;
+}
+.popup_Titlebar 
+{
+	background: url(../Images/titlebar_bg.jpg);
+	height: 29px;
+}
+
+.popup_Body
+{
+	padding:15px 15px 15px 15px;	
+	color:#000000;
+	line-height:15pt;
+	clear:both;
+	padding:20px;
+}
+
+.TitlebarLeft 
+{
+	float:left;
+	padding-left:5px;
+	padding-top:5px;	
+	color:#FFFFFF;
+}
+.TitlebarRight 
+{
+	background:url(../Images/cross_icon_normal.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	height:16px !important;
+	width:16px !important;
+	float:right;
+	cursor:pointer;
+	margin-right:5px;
+	margin-top:5px;
+}
+
+.popup_Buttons
+{
+	margin:10px;
+}
+
+/****************************************Bootstrap Custom Menu Control ************************************************/
+.VedioTabRight 
+{
+  left: 0px;
+  background-position: left 0;
+}
+
+.VedioTabImage 
+{ 
+    height: 90px;
+    width: 30px;    
+    display: block;
+    background-image: url('../Images/help.png');    
+}
+#VedioTab 
+{
+    border:none;
+    cursor: pointer;  
+    overflow: hidden;
+    position: fixed;  
+    top: 55%;
+    width: 30px;
+  
+}
+
+ul#menu 
+{
+    margin: 0 0 0px;
+    padding: 0;
+    text-align: center;
+}
+    ul#menu li 
+    {
+        display: inline;
+        list-style: none;
+        padding-right: 1px;
+       /* background-color: #615f67;  For Seperator*/
+    }       
+ul#menu li a 
+{
+    text-decoration: none; 
+    text-transform: uppercase;
+    white-space: nowrap; 
+    font-weight:bold;
+   padding-right:20px;  /*  For Seperator*/ 
+    padding-left:20px; /*  For Seperator*/ 
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-brand 
+{
+    color: rgba(250, 245, 245, 1);
+}
+
+#custom-bootstrap-menu.navbar-default
+{
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+    /*background: url(../images/footerPaint.png) left bottom repeat-x;*/
+    border-width: 0px;
+    /*border-width: 1px;*/   /*For Removing the White Border*/ 
+    margin-top:1px;         /*For Upper White Border*/     
+    border-top-right-radius:0px;
+    border-top-left-radius:0px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius:12px;
+    -moz-border-top-right-radius:0px;
+    -moz-border-top-left-radius:0px;
+    -moz-border-bottom-right-radius:12px;
+    -moz-border-bottom-left-radius:12px;
+    -webkit-border-top-right-radius:0px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-bottom-right-radius:12px;
+    -webkit-border-bottom-left-radius:12px;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a 
+{
+    color: rgba(147, 147, 147, 1);
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+    text-shadow:none;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus 
+{
+    color: rgba(255, 255, 255, 1);    
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;    
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus 
+{
+    color: rgba(147, 147, 147, 1);    
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle 
+{
+    background-color: #0b0b0c;
+    height :40px;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus 
+{
+    background-color: #0b0b0c;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar 
+{
+    background-color: white;  
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar 
+{    
+    background-color: white; 
+}
+.dropdown-menu > li > a 
+{    
+    color: #38373b;
+    font: 11px/20px Tahoma,Helvetica,sans-serif;
+     padding-right:0px;  /* For Seperator*/ 
+    padding-left:0px;  /* For Seperator*/ 
+}
+
+/****************************************Bootstrap Custom Menu Control ************************************************/
+
+/****************************************Banner Control ************************************************/
+.banner-caption 
+{
+    filter: alpha(opacity=60); /* here you can set the opacity of box with text */
+    -moz-opacity: 0.6; /* here you can set the opacity of box with text */
+    -khtml-opacity: 0.6; /* here you can set the opacity of box with text */
+    opacity: 0.6; /* here you can set the opacity of box with text */
+    background-color: #000;
+    /*position: absolute;*/ 
+    width: 100%; 
+    margin-top :180px;
+    line-height: 30px;
+    color: #fff;
+    text-align:left;    
+    left: 0;
+    padding-left:5px;
+    /*font: 12px/15px Arial, Helvetica, sans-serif;*/
+    bottom: 0;
+}
+/****************************************Banner Control ************************************************/
+
+/****************************************Common Control ************************************************/
+.displaynone
+{
+    display:none;
+}
+.ImageDivPadding 
+{
+    padding-left:65px; 
+    padding-right:65px; 
+    
+}
+.ImageHeading 
+{    
+    font-family: Tahoma; 
+    font-weight: normal; 
+    text-align:center
+}
+
+.image-Padding 
+{    
+    width:auto;
+    height:200px;
+    border:none;
+}
+
+.evidCertificare 
+{
+    width:auto;
+    /*height:200px;*/
+    border:none;
+    
+}
+
+.EvidenceCertificareHeading 
+{
+    font-size: 21px;
+    font-weight: normal;
+    text-align:center;
+    
+}
+
+h1, h2, h3, h4, h5, h6 
+{    
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h4 
+{
+    font-size: 14px; font-family: Tahoma; font-weight: normal;
+}
+h5 
+{
+    font-size: 14px; font-weight: normal; font-family: Tahoma;
+}
+
+h3 
+{
+    font-family: Tahoma; font-size: 14px; margin-top: 17px; font-weight: normal;
+}
+
+h2 
+{
+    font-family: Tahoma; 
+    font-size: 14px; 
+    font-weight: normal;
+}
+
+h1 
+{       
+    font-family: Trebuchet MS; 
+    color: #5C5B5B;
+    font-size: 21px;
+}
+.float-left 
+{
+    float: left;
+}
+
+.float-right 
+{
+    float: right;
+}
+
+.gridBorderStyle 
+{
+    border: 1px solid #cacaca;
+    background-color: lightgray;
+    padding: 0 0 0 0;
+}
+.one-edge-shadow 
+{
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    /*box-shadow: 0 8px 6px -6px black;*/
+    box-shadow: 0px 5px 16px 1px black;
+}
+a 
+{
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+a:link, a:visited, a:active, a:hover 
+{
+    background-color: transparent;
+}
+.validator 
+{
+    color: red;
+}
+#body 
+{
+    clear: both;
+    padding:5px;
+}
+
+input[type="submit"],
+input[type="button"],
+button 
+{
+    height:25px;
+    width:auto;
+    border:1px solid #707070;
+    font-weight:bold;
+}
+td input[type="submit"],
+td input[type="button"],
+td button 
+{
+    height:25px;
+    width:auto;
+}
+
+input, textarea, select 
+{
+    border: 1px solid #e2e2e2;   
+    color: #333;    
+    margin-bottom: 6px;
+    height:25px;
+    width:200px;
+}
+
+textarea 
+{
+    font-family: inherit;
+    height:100px;
+    resize:none;
+}
+
+input:focus, textarea:focus 
+{
+    border: 1px solid #7ac0da;     
+}
+
+input[type="checkbox"] 
+{
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+.HeaderDesignPaint 
+{
+    background: url(../images/tab_b000.png) repeat-x 0 0;
+    height: 42px;
+}
+
+.begin 
+{
+    text-align: left;
+    font-weight: normal;
+    font-size: 11px;
+    font-family: Tahoma;
+}
+
+.message-error 
+{
+    clear: both;
+    color: red;
+    margin: 20px 0 10px 0;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.validation-summary-errors 
+{
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+html, body 
+{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font: 11px/20px "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;     
+}
+
+html 
+{
+    margin: auto;
+}
+
+body 
+{    
+    max-width: 900px;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+
+/****************************************Common Control ************************************************/
+
+/****************************************Footer Start************************************************/
+footer{
+    background: rgba(76,76,76,1);
+    background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(100%, rgba(19,19,19,1)));
+    background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 14px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 14px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 14px 3px rgba(0,0,0,0.75);
+    height: 60px;
+    color: #939393;
+    clear: both;
+    font-size: 10px;
+    padding-top:20px;
+    padding-left:20px;
+}
+
+footer a 
+{
+    color: white;
+    font-weight:bold;
+}
+header, footer, hgroup, nav, section 
+{
+    display: block;
+}
+
+/****************************************Footer End************************************************/
+
+/* login
+----------------------------------------------------------*/
+#login 
+{
+    display: block;
+    font-size: .85em;
+    margin: 0 0 0 0;
+    text-align: right;
+    z-index: 999;
+}
+
+#logo 
+{
+    background-color: transparent;
+    border: none;
+    width:auto;
+    margin-top:-30px;
+}
+
+#login a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+#login a.username 
+{
+    background: none;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+
+#login li.left 
+{
+    background: url(../images/tab_l000.png) no-repeat left 0;
+    height: 42px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+
+#login li.right 
+{
+    background: url(../images/tab_r000.png) no-repeat left 0;
+    height: 42px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+    display: inline;
+    list-style: none;
+    color: white;
+}
+
+#login li 
+{
+    text-align: left;
+    display: block;
+    float: left;
+    height: 42px;
+    background: url(../images/tab_m000.png) repeat-x 0 0;
+    display: inline;
+    list-style: none;
+    color: white;
+    padding-top: 8px;
+    font-weight:bold;
+}
+
+login ul 
+{
+    margin: 0;
+}
+
+.clear-fix:after 
+{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper 
+{
+    margin: 0 auto;
+    padding:0px;
+}
+.main-content 
+{    
+    padding-left: 10px;    
+    padding-right: 10px;
+}
+header .content-wrapper 
+{
+    height: 0px;
+}
+
+/* page titles */
+hgroup.title 
+{
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 
+{
+    display: inline;
+}
+
+hgroup.title h2 
+{
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+
+/* forms */
+fieldset 
+{
+    border: none;
+    margin: 0;
+    padding: 0;    
+}
+
+fieldset legend 
+{
+    display: none;
+}
+
+fieldset ol 
+{
+    padding: 0;
+    list-style: none;
+}
+
+fieldset ol li 
+{
+    padding-bottom: 5px;
+}
+
+label 
+{
+    display: block;
+    /*font-weight: 600;*/          /*Bug Label need to Display bold*/
+    font-weight:normal;
+}
+
+label.checkbox 
+{
+    display: inline;
+}
+
+/* tables
+----------------------------------------------------------*/
+table 
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.75em;
+    border: 0 none;
+}
+
+th 
+{
+    background: #AFB3B6;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -moz-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -ms-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -o-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: linear-gradient(to bottom, #AFB3B6, #83878a);
+    text-shadow: 0px 0px 3px #666666;    
+    background-color: #AFB3B6;
+    border: 1px solid #787878;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    margin-right: 8px;
+    width: auto;
+    text-align: left;
+    border: none 0px;    
+}
+td 
+{
+    padding: 2px 2px 2px 2px;
+    border: 0 none;
+}

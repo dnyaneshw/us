@@ -1,0 +1,491 @@
+﻿/****************************************Bootstrap Custom Menu Control ************************************************/
+ul#menu 
+{
+    margin: 0 0 0px;
+    padding: 0;
+    text-align: center;
+}
+ul#menu li 
+{
+    display: inline;
+    list-style: none;   
+}
+ul#menu li a 
+{
+    text-decoration: none; 
+    text-transform: uppercase;
+    white-space: nowrap; 
+    font-weight:bold;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-brand 
+{
+    color: rgba(250, 245, 245, 1);
+}
+
+#custom-bootstrap-menu.navbar-default
+{
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+    border-width: 1px;    
+    border-top-right-radius:0px;
+    border-top-left-radius:0px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius:12px;
+    -moz-border-top-right-radius:0px;
+    -moz-border-top-left-radius:0px;
+    -moz-border-bottom-right-radius:12px;
+    -moz-border-bottom-left-radius:12px;
+    -webkit-border-top-right-radius:0px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-bottom-right-radius:12px;
+    -webkit-border-bottom-left-radius:12px;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a 
+{
+    color: rgba(147, 147, 147, 1);
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+    text-shadow:none;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus 
+{
+    color: rgba(255, 255, 255, 1);    
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;    
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus 
+{
+    color: rgba(147, 147, 147, 1);    
+    background-color: rgba(56, 55, 59, 1);
+    background: #0b0b0c;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle 
+{
+    background-color: #0b0b0c;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus 
+{
+    background-color: #0b0b0c;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar 
+{
+    background-color: white;  
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar 
+{    
+    background-color: white; 
+}
+.dropdown-menu > li > a 
+{    
+    color: #38373b;
+    font: 11px/20px Tahoma,Helvetica,sans-serif;
+}
+
+/****************************************Bootstrap Custom Menu Control ************************************************/
+
+/****************************************Banner Control ************************************************/
+.banner-caption 
+{
+    filter: alpha(opacity=40); 
+    opacity: 0.4; 
+    background:lightgray; 
+    position: absolute; 
+    width: 100%; 
+    top: 450px;     
+    padding: 5px;
+    text-align: left; 
+    line-height: 30px; 
+    font-size: 15px;
+    color: #FFFFFF; 
+    background-color: #808080;
+}
+/****************************************Banner Control ************************************************/
+
+/****************************************Common Control ************************************************/
+h1, h2, h3, h4, h5, h6 
+{
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 
+{
+    background: url(../images/headingUnderline.gif) left bottom repeat-x;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.float-left 
+{
+    float: left;
+}
+
+.float-right 
+{
+    float: right;
+}
+
+.gridBorderStyle 
+{
+    border: 1px solid #cacaca;
+    background-color: lightgray;
+    padding: 0 0 0 0;
+}
+.one-edge-shadow 
+{
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    /*box-shadow: 0 8px 6px -6px black;*/
+    box-shadow: 0px 5px 16px 1px black;
+}
+a 
+{
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+a:link, a:visited, a:active, a:hover 
+{
+    background-color: transparent;
+}
+.validator 
+{
+    color: red;
+}
+#body 
+{
+    clear: both;
+}
+
+input[type="submit"],
+input[type="button"],
+button 
+{
+    height:25px;
+    width:auto;
+}
+td input[type="submit"],
+td input[type="button"],
+td button 
+{
+    height:25px;
+    width:auto;
+}
+
+input, textarea, select 
+{
+    border: 1px solid #e2e2e2;   
+    color: #333;    
+    margin-bottom: 6px;
+    height:25px;
+    width:200px;
+}
+
+textarea 
+{
+    font-family: inherit;
+}
+
+input:focus, textarea:focus 
+{
+    border: 1px solid #7ac0da;
+}
+
+input[type="checkbox"] 
+{
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+.HeaderDesignPaint 
+{
+    background: url(../images/tab_b000.png) repeat-x 0 0;
+    height: 42px;
+}
+
+.begin 
+{
+    text-align: left;
+    font-weight: normal;
+    font-size: 11px;
+    font-family: Tahoma;
+}
+
+.message-error 
+{
+    clear: both;
+    color: #e80c4d;   
+    margin: 20px 0 10px 0;
+}
+
+.validation-summary-errors 
+{
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+html, body 
+{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font: 11px/20px Tahoma,Helvetica,sans-serif;
+}
+
+html 
+{
+    margin: auto;
+}
+
+body 
+{    
+    max-width: 1100px;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+
+/****************************************Common Control ************************************************/
+
+/****************************************Footer Start************************************************/
+footer 
+{
+    clear: both;
+    font-size: .8em;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 5px;
+    background: url(../images/footerPaint.png) left bottom repeat-x;
+    background-color: #222222;
+    border: #solid 10px #000;
+    border-width: 1px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    color: white;
+     font-weight:bold;
+}
+
+footer a 
+{
+    color: white;
+}
+header, footer, hgroup, nav, section 
+{
+    display: block;
+}
+
+/****************************************Footer End************************************************/
+
+/* login
+----------------------------------------------------------*/
+#login 
+{
+    display: block;
+    font-size: .85em;
+    margin: 0 0 0 0;
+    text-align: right;
+    z-index: 999;
+}
+
+#logo 
+{
+    background-color: transparent;
+    border: none;
+}
+
+#login a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+#login a.username 
+{
+    background: none;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+
+#login li.left 
+{
+    background: url(../images/tab_l000.png) no-repeat left 0;
+    height: 42px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+
+#login li.right 
+{
+    background: url(../images/tab_r000.png) no-repeat left 0;
+    height: 42px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+    display: inline;
+    list-style: none;
+    color: white;
+}
+
+#login li 
+{
+    text-align: left;
+    display: block;
+    float: left;
+    height: 42px;
+    background: url(../images/tab_m000.png) repeat-x 0 0;
+    display: inline;
+    list-style: none;
+    color: white;
+    padding-top: 8px;
+    font-weight:bold;
+}
+
+login ul 
+{
+    margin: 0;
+}
+
+.clear-fix:after 
+{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper 
+{
+    margin: 0 auto;
+    padding-left: 5px;    
+    padding-right: 5px;
+}
+.main-content 
+{    
+    padding-left: 10px;    
+    padding-right: 10px;
+}
+header .content-wrapper 
+{
+    height: 0px;
+}
+
+/* page titles */
+hgroup.title 
+{
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 
+{
+    display: inline;
+}
+
+hgroup.title h2 
+{
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+
+/* forms */
+fieldset 
+{
+    border: none;
+    margin: 0;
+    padding: 0;    
+}
+
+fieldset legend 
+{
+    display: none;
+}
+
+fieldset ol 
+{
+    padding: 0;
+    list-style: none;
+}
+
+fieldset ol li 
+{
+    padding-bottom: 5px;
+}
+
+label 
+{
+    display: block;
+    font-weight: 600;
+}
+
+label.checkbox 
+{
+    display: inline;
+}
+
+/* tables
+----------------------------------------------------------*/
+table 
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.75em;
+    border: 0 none;
+}
+
+th 
+{
+    background: #AFB3B6;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -moz-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -ms-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: -o-linear-gradient(top, #AFB3B6, #83878a);
+    background-image: linear-gradient(to bottom, #AFB3B6, #83878a);
+    text-shadow: 0px 0px 3px #666666;
+    font-family: arial,helvetica,sans-serif;
+    background-color: #AFB3B6;
+    border: 1px solid #787878;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 8px;
+    width: auto;
+    text-align: left;
+    border: none 0px;
+    padding-left: 1em;
+}
+td 
+{
+    padding: 0.25em 2em 0.25em 1em;
+    border: 0 none;
+}
